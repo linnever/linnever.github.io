@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="LeetCode," />
+  <meta name="keywords" content="Welcome to my world" />
 
 
 
@@ -35,22 +35,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="First Missing PositiveGiven an unsorted integer array, find the first missing positive integer.
-For example,Given [1,2,0] return 3,and [3,4,-1,1] return 2.
-Your algorithm should run in O(n) time and u">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-41">
-<meta property="og:url" content="http://linnever.github.io/2015/07/20/LeetCode-41/index.html">
+<meta property="og:title" content="git error">
+<meta property="og:url" content="http://linnever.github.io/2015/08/12/git-error/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="First Missing PositiveGiven an unsorted integer array, find the first missing positive integer.
-For example,Given [1,2,0] return 3,and [3,4,-1,1] return 2.
-Your algorithm should run in O(n) time and u">
-<meta property="og:updated_time" content="2015-08-11T16:55:28.382Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2015-08-11T19:24:27.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-41">
-<meta name="twitter:description" content="First Missing PositiveGiven an unsorted integer array, find the first missing positive integer.
-For example,Given [1,2,0] return 3,and [3,4,-1,1] return 2.
-Your algorithm should run in O(n) time and u">
+<meta name="twitter:title" content="git error">
+<meta name="twitter:description">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +54,7 @@ Your algorithm should run in O(n) time and u">
   };
 </script>
 
-  <title> LeetCode-41 | Linnever </title>
+  <title> git error | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -175,7 +169,7 @@ Your algorithm should run in O(n) time and u">
           
           
             
-              LeetCode-41
+              git error
             
           
         </h1>
@@ -184,34 +178,19 @@ Your algorithm should run in O(n) time and u">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-07-20T16:20:45+08:00" content="2015-07-20">
-            2015-07-20
+          <time itemprop="dateCreated" datetime="2015-08-12T03:24:26+08:00" content="2015-08-12">
+            2015-08-12
           </time>
         </span>
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                  <span itemprop="name">LeetCode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/07/20/LeetCode-41/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/20/LeetCode-41/" itemprop="commentsCount"></span>
+              <a href="/2015/08/12/git-error/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/12/git-error/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -225,41 +204,22 @@ Your algorithm should run in O(n) time and u">
       
 
       
-        <span itemprop="articleBody"><h2 id="First_Missing_Positive">First Missing Positive</h2><p>Given an unsorted integer array, find the first missing positive integer.</p>
-<p>For example,<br>Given [1,2,0] return 3,<br>and [3,4,-1,1] return 2.</p>
-<p>Your algorithm should run in O(n) time and uses constant space.<br><a id="more"></a></p>
-<h3 id="题目大意：">题目大意：</h3><ol>
-<li>按依次顺序找到数组中第一个缺少的正整数。</li>
-<li>时间复杂度要求为O(n),空间复杂度为O(1)</li>
-</ol>
-<h3 id="解题思路：">解题思路：</h3><ol>
-<li>因为要求空间复杂度为O(1)所以，不能使用额外的空间，只能在原数组上进行处理，最先开始想到先把数组排序，再去判断，但是，现有的排序算法中没有O(n)效率，最低也只有快排，而且代码量长需要用到额外的空间。</li>
-<li>查询discuss，其他的答案，发现他们的解法很棒。</li>
-</ol>
-<h3 id="解法有如下：">解法有如下：</h3><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> int firstMissingPositive(int[] A) <span class="comment">&#123;</span><br><span class="line">       int i = 0;</span><br><span class="line">       while(i &lt; A.length)&#123;</span><br><span class="line">           if(A[i] == i+1 || A[i] &lt;= 0 || A[i] &gt; A.length) i++;</span><br><span class="line">           else if(A[A[i]-1] != A[i]) swap(A, i, A[i]-1);</span><br><span class="line">           else i++;</span><br><span class="line">       &#125;</span></span><br><span class="line">       i = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">while</span>(i &lt; A.length &amp;&amp; A[i] == i+<span class="number">1</span>) i++;</span><br><span class="line">       return i+<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">private</span> void swap(int[] A, int i, int j)<span class="comment">&#123;</span><br><span class="line">       int temp = A[i];</span><br><span class="line">       A[i] = A[j];</span><br><span class="line">       A[j] = temp;</span><br><span class="line">   &#125;</span></span><br></pre></td></tr></table></figure></span>
+        <span itemprop="articleBody"></span>
       
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
-          
-        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/12/git-error/" rel="prev">git error</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/19/LeetCode-153/" rel="next">LeetCode-153</a>
+              <a href="/2015/07/20/LeetCode-41/" rel="next">LeetCode-41</a>
             
           </div>
         </div>
@@ -274,10 +234,10 @@ Your algorithm should run in O(n) time and u">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/07/20/LeetCode-41/"
-     data-title="LeetCode-41"
+        <div class="ds-share flat" data-thread-key="2015/08/12/git-error/"
+     data-title="git error"
      data-content=""
-     data-url="http://linnever.github.io/2015/07/20/LeetCode-41/">
+     data-url="http://linnever.github.io/2015/08/12/git-error/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -303,8 +263,8 @@ Your algorithm should run in O(n) time and u">
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/07/20/LeetCode-41/"
-                   data-title="LeetCode-41" data-url="http://linnever.github.io/2015/07/20/LeetCode-41/">
+              <div class="ds-thread" data-thread-key="2015/08/12/git-error/"
+                   data-title="git error" data-url="http://linnever.github.io/2015/08/12/git-error/">
               </div>
             
           </div>
@@ -402,7 +362,7 @@ Your algorithm should run in O(n) time and u">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#First_Missing_Positive"><span class="nav-number">1.</span> <span class="nav-text">First Missing Positive</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意："><span class="nav-number">1.1.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路："><span class="nav-number">1.2.</span> <span class="nav-text">解题思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法有如下："><span class="nav-number">1.3.</span> <span class="nav-text">解法有如下：</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
