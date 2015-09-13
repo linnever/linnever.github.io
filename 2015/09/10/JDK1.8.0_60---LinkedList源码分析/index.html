@@ -37,13 +37,13 @@
 
 <meta name="description" content="LinkedList概述123public class LinkedList&amp;lt;E&amp;gt;    extends AbstractSequentialList&amp;lt;E&amp;gt;    implements List&amp;lt;E&amp;gt;, Deque&amp;lt;E&amp;gt;, Cloneable, java.io.Serializable">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK1.8.0_40---LinkedList源码分析">
-<meta property="og:url" content="http://linnever.github.io/2015/09/10/JDK1.8.0_40---LinkedList源码分析/index.html">
+<meta property="og:title" content="JDK1.8.0_60---LinkedList源码分析">
+<meta property="og:url" content="http://linnever.github.io/2015/09/10/JDK1.8.0_60---LinkedList源码分析/index.html">
 <meta property="og:site_name" content="Linnever">
 <meta property="og:description" content="LinkedList概述123public class LinkedList&amp;lt;E&amp;gt;    extends AbstractSequentialList&amp;lt;E&amp;gt;    implements List&amp;lt;E&amp;gt;, Deque&amp;lt;E&amp;gt;, Cloneable, java.io.Serializable">
-<meta property="og:updated_time" content="2015-09-11T02:46:06.775Z">
+<meta property="og:updated_time" content="2015-09-11T15:57:26.033Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JDK1.8.0_40---LinkedList源码分析">
+<meta name="twitter:title" content="JDK1.8.0_60---LinkedList源码分析">
 <meta name="twitter:description" content="LinkedList概述123public class LinkedList&amp;lt;E&amp;gt;    extends AbstractSequentialList&amp;lt;E&amp;gt;    implements List&amp;lt;E&amp;gt;, Deque&amp;lt;E&amp;gt;, Cloneable, java.io.Serializable">
 
 
@@ -54,7 +54,7 @@
   };
 </script>
 
-  <title> JDK1.8.0_40---LinkedList源码分析 | Linnever </title>
+  <title> JDK1.8.0_60---LinkedList源码分析 | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -190,7 +190,7 @@
           
           
             
-              JDK1.8.0_40---LinkedList源码分析
+              JDK1.8.0_60---LinkedList源码分析
             
           
         </h1>
@@ -225,8 +225,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/09/10/JDK1.8.0_40---LinkedList源码分析/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/10/JDK1.8.0_40---LinkedList源码分析/" itemprop="commentsCount"></span>
+              <a href="/2015/09/10/JDK1.8.0_60---LinkedList源码分析/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/10/JDK1.8.0_60---LinkedList源码分析/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -317,10 +317,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/09/10/JDK1.8.0_40---LinkedList源码分析/"
-     data-title="JDK1.8.0_40---LinkedList源码分析"
+        <div class="ds-share flat" data-thread-key="2015/09/10/JDK1.8.0_60---LinkedList源码分析/"
+     data-title="JDK1.8.0_60---LinkedList源码分析"
      data-content=""
-     data-url="http://linnever.github.io/2015/09/10/JDK1.8.0_40---LinkedList源码分析/">
+     data-url="http://linnever.github.io/2015/09/10/JDK1.8.0_60---LinkedList源码分析/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -346,8 +346,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/09/10/JDK1.8.0_40---LinkedList源码分析/"
-                   data-title="JDK1.8.0_40---LinkedList源码分析" data-url="http://linnever.github.io/2015/09/10/JDK1.8.0_40---LinkedList源码分析/">
+              <div class="ds-thread" data-thread-key="2015/09/10/JDK1.8.0_60---LinkedList源码分析/"
+                   data-title="JDK1.8.0_60---LinkedList源码分析" data-url="http://linnever.github.io/2015/09/10/JDK1.8.0_60---LinkedList源码分析/">
               </div>
             
           </div>
@@ -387,7 +387,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
