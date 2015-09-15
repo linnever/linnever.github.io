@@ -191,6 +191,91 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/15/JDK1.8.0_60---HashMap源码分析/" itemprop="url">
+                JDK1.8.0_60---HashMap源码分析
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-15T08:29:16+08:00" content="2015-09-15">
+            2015-09-15
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/JDK/" itemprop="url" rel="index">
+                  <span itemprop="name">JDK</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/09/15/JDK1.8.0_60---HashMap源码分析/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/15/JDK1.8.0_60---HashMap源码分析/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>HashMap概述：</p>
+<p>- </p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/13/JDK1.8.0_60---ArrayList源码分析/" itemprop="url">
                 JDK1.8.0_60---ArrayList源码分析
               </a>
@@ -244,7 +329,8 @@
 
       
         
-          <h2 id="ArrayList概述">ArrayList概述</h2><p>ArrayList是List接口的可变数组的实现。实现了所有可选列表操作，并允许包括 null 在内的所除了实现 List 接口外，此类还提供一些方法来操作内部用来存储列表的数组的大小。<br>
+          <p>ArrayList概述</p>
+<p>ArrayList是List接口的可变数组的实现。实现了所有可选列表操作，并允许包括 null 在内的所除了实现 List 接口外，此类还提供一些方法来操作内部用来存储列表的数组的大小。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/09/13/JDK1.8.0_60---ArrayList源码分析/#more" rel="contents">
               阅读全文 &raquo;
@@ -332,7 +418,8 @@
 
       
         
-          <h2 id="treansient的作用及使用方法">treansient的作用及使用方法</h2><p>我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化，java的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了Serilizable接口，这个类的所有属性和方法都会自动序列化。<br>
+          <p>treansient的作用及使用方法</p>
+<p>我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化，java的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了Serilizable接口，这个类的所有属性和方法都会自动序列化。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/09/11/Java关键字transient/#more" rel="contents">
               阅读全文 &raquo;
@@ -420,7 +507,8 @@
 
       
         
-          <h2 id="LinkedList概述">LinkedList概述</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span>&lt;<span class="title">E</span>&gt;</span><br><span class="line">    <span class="keyword">extends</span> <span class="title">AbstractSequentialList</span>&lt;<span class="title">E</span>&gt;</span><br><span class="line">    <span class="keyword">implements</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt;, <span class="title">Deque</span>&lt;<span class="title">E</span>&gt;, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span></span><br></pre></td></tr></table></figure>
+          <p>LinkedList概述</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span>&lt;<span class="title">E</span>&gt;</span><br><span class="line">    <span class="keyword">extends</span> <span class="title">AbstractSequentialList</span>&lt;<span class="title">E</span>&gt;</span><br><span class="line">    <span class="keyword">implements</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt;, <span class="title">Deque</span>&lt;<span class="title">E</span>&gt;, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span></span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/09/10/JDK1.8.0_60---LinkedList源码分析/#more" rel="contents">
               阅读全文 &raquo;
@@ -508,9 +596,12 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="如何给Markdown字体添加颜色">如何给Markdown字体添加颜色</h2><p>形如：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="string">"red"</span>&gt;要变红的文字&lt;/<span class="attribute">font</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>效果如下：</p>
-<font color="red">要变红的文字</font></span>
+          <p>如何给Markdown字体添加颜色<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/10/Markdown技巧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -594,7 +685,8 @@
       
         
           <p><strong>二分法总结</strong></p>
-<h2 id="基本的二分法查找">基本的二分法查找</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Binary_Search</span><span class="params">(<span class="keyword">int</span>[]nums,<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> high = nums.length - <span class="number">1</span>, low = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(low &lt;= high)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> mid = low + (high - low) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> (nums[mid] &gt; target)</span><br><span class="line">			high = mid - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (nums[mid] &gt; target) </span><br><span class="line">			low = mid + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> mid;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>基本的二分法查找</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Binary_Search</span><span class="params">(<span class="keyword">int</span>[]nums,<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> high = nums.length - <span class="number">1</span>, low = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(low &lt;= high)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> mid = low + (high - low) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> (nums[mid] &gt; target)</span><br><span class="line">			high = mid - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (nums[mid] &gt; target) </span><br><span class="line">			low = mid + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> mid;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/08/20/Binary-Search/#more" rel="contents">
               阅读全文 &raquo;
@@ -682,7 +774,8 @@
 
       
         
-          <h2 id="良心-软件大杂烩">良心-软件大杂烩</h2><h3 id="Windows篇">Windows篇</h3><ol>
+          <p>良心-软件大杂烩 </p>
+<h3 id="Windows篇">Windows篇</h3><ol>
 <li><p><strong>Everything</strong>: 首推！！介于Windows自带的文件搜索功能弱爆了(目测是根据类似以路径为节点的二叉树),<strong>everything</strong> 搜索根据你输入的文件名，快速定位(目测是根据字母为节点的二叉树【不全是】)。总的来说:对于经常要不知道文件放哪的用户，但是希望很快来找到文件的，必备！快的超乎你的想象！！</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/08/19/Softwares/#more" rel="contents">
@@ -771,7 +864,8 @@
 
       
         
-          <span itemprop="articleBody"><h2 id="git_error">git error</h2><p>Error: Permission denied (publickey)<br>you can see <a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">this</a></p>
+          <span itemprop="articleBody"><p>git error</p>
+<p>Error: Permission denied (publickey)<br>you can see <a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">this</a></p>
 <h2 id="my_error">my error</h2><p>如果你把电脑语言从英文改成中文。c盘目录下的<strong>用户</strong>文件会替换掉<strong>User</strong>文件夹。在添加新的ssh的时候，目录还会是<strong>user</strong>的目录。所以github官方会拒绝你的链接。</p>
 </span>
         
@@ -978,95 +1072,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/18/LeetCode-219/" itemprop="url">
-                LeetCode-219
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-07-18T02:29:25+08:00" content="2015-07-18">
-            2015-07-18
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                  <span itemprop="name">LeetCode</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/18/LeetCode-219/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/18/LeetCode-219/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="Contains_Duplicate_II">Contains Duplicate II</h1><p>Given an array of integers and an integer k, find out whether there there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k. </p>
-<h2 id="题目大意：">题目大意：</h2><p>给定一个整数数组nums与一个整数k，当且仅当存在两个不同的下标i和j满足nums[i] = nums[j]并且| i - j | &lt;= k时返回true，否则返回false。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/18/LeetCode-219/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1105,7 +1110,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

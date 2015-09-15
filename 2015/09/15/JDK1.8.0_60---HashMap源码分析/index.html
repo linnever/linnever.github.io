@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="C,C++,指针数组," />
+  <meta name="keywords" content="JDK," />
 
 
 
@@ -35,20 +35,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="指针数组1234567891011main()&amp;#123;int a[5]=&amp;#123;1,2,3,4,5&amp;#125;;int *ptr=(int*)(&amp;amp;a+1);printf(&quot;%d,%d&quot;,*(a+1),*(ptr-1));&amp;#125;
-输出：2,5">
+<meta name="description" content="HashMap概述：
+-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="指针数组">
-<meta property="og:url" content="http://linnever.github.io/2015/06/18/指针数组/index.html">
+<meta property="og:title" content="JDK1.8.0_60---HashMap源码分析">
+<meta property="og:url" content="http://linnever.github.io/2015/09/15/JDK1.8.0_60---HashMap源码分析/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="指针数组1234567891011main()&amp;#123;int a[5]=&amp;#123;1,2,3,4,5&amp;#125;;int *ptr=(int*)(&amp;amp;a+1);printf(&quot;%d,%d&quot;,*(a+1),*(ptr-1));&amp;#125;
-输出：2,5">
-<meta property="og:image" content="http://i.imgur.com/TP3W8aw.png">
-<meta property="og:updated_time" content="2015-08-11T17:01:40.457Z">
+<meta property="og:description" content="HashMap概述：
+-">
+<meta property="og:updated_time" content="2015-09-15T15:22:58.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="指针数组">
-<meta name="twitter:description" content="指针数组1234567891011main()&amp;#123;int a[5]=&amp;#123;1,2,3,4,5&amp;#125;;int *ptr=(int*)(&amp;amp;a+1);printf(&quot;%d,%d&quot;,*(a+1),*(ptr-1));&amp;#125;
-输出：2,5">
+<meta name="twitter:title" content="JDK1.8.0_60---HashMap源码分析">
+<meta name="twitter:description" content="HashMap概述：
+-">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +57,7 @@
   };
 </script>
 
-  <title> 指针数组 | Linnever </title>
+  <title> JDK1.8.0_60---HashMap源码分析 | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -194,7 +193,7 @@
           
           
             
-              指针数组
+              JDK1.8.0_60---HashMap源码分析
             
           
         </h1>
@@ -203,8 +202,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-06-18T00:11:43+08:00" content="2015-06-18">
-            2015-06-18
+          <time itemprop="dateCreated" datetime="2015-09-15T08:29:16+08:00" content="2015-09-15">
+            2015-09-15
           </time>
         </span>
 
@@ -213,8 +212,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/C-C/" itemprop="url" rel="index">
-                  <span itemprop="name">C/C++</span>
+                <a href="/categories/JDK/" itemprop="url" rel="index">
+                  <span itemprop="name">JDK</span>
                 </a>
               </span>
 
@@ -229,8 +228,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/06/18/指针数组/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/18/指针数组/" itemprop="commentsCount"></span>
+              <a href="/2015/09/15/JDK1.8.0_60---HashMap源码分析/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/15/JDK1.8.0_60---HashMap源码分析/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -244,23 +243,8 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="指针数组">指针数组</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">main()</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *ptr=(<span class="keyword">int</span>*)(&amp;a+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d,%d"</span>,*(a+<span class="number">1</span>),*(ptr-<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出：2,5<br><a id="more"></a></p>
-<p>&amp;a是数组指针，其类型为 int (*)[5];</p>
-<p>而指针加1要根据指针类型加上一定的值，</p>
-<p>不同类型的指针+1之后增加的大小不同</p>
-<p>a是长度为5的int数组指针，所以要加 5*sizeof(int)</p>
-<p>所以ptr实际是a[5]</p>
-<p>但是prt与(&amp;a+1)类型是不一样的</p>
-<p>所以prt-1只会减去sizeof(int*)</p>
-<p>a,&amp;a的地址是一样的，但意思不一样，a是数组首地址，也就是a[0]的地址，&amp;a是对象（数组）首地址，a+1是数组下一元素的地址，即a[1],&amp;a+1是下一个对象的地址，即a[5].</p>
-<h2 id="演示">演示</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">5</span>] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">	<span class="keyword">int</span> *ptr = (<span class="keyword">int</span>*)(&amp;a + <span class="number">1</span>);</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt;<span class="string">"a[0]的地址"</span>&lt;&lt; &amp;a[<span class="number">0</span>] &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"a[1]的地址"</span> &lt;&lt; &amp;a[<span class="number">1</span>] &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"a[2]的地址"</span> &lt;&lt; &amp;a[<span class="number">2</span>] &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"a[3]的地址"</span> &lt;&lt; &amp;a[<span class="number">3</span>] &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"a[4]的地址"</span> &lt;&lt; &amp;a[<span class="number">4</span>] &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"a的地址"</span> &lt;&lt; &amp;a &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"&amp;a + 1的地址"</span> &lt;&lt; &amp;a + <span class="number">1</span> &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"(int*)&amp;a + 1的地址"</span> &lt;&lt; (<span class="keyword">int</span>*)&amp;a + <span class="number">1</span> &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果运行图：<br><img src="http://i.imgur.com/TP3W8aw.png" alt=""><br>该图证明了</p>
-<ol>
-<li>a,a[0]的地址是一样的</li>
-<li>&amp;a+1=a的地址+sizeof(a)(=5)</li>
-<li>(int*)&amp;a:把&amp;a强制转换成int类型的指针，该基础上加一表示下一个数的地址</li>
-</ol>
+        <span itemprop="articleBody"><p>HashMap概述：</p>
+<p>- </p>
 </span>
       
     </div>
@@ -269,11 +253,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag">#C</a>
-          
-            <a href="/tags/C/" rel="tag">#C++</a>
-          
-            <a href="/tags/指针数组/" rel="tag">#指针数组</a>
+            <a href="/tags/JDK/" rel="tag">#JDK</a>
           
         </div>
       
@@ -282,13 +262,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/17/LeetCode-217/" rel="prev">LeetCode-217</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/17/深入理解操作系统之链接/" rel="next">深入理解操作系统</a>
+              <a href="/2015/09/13/JDK1.8.0_60---ArrayList源码分析/" rel="next">JDK1.8.0_60---ArrayList源码分析</a>
             
           </div>
         </div>
@@ -303,10 +281,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/06/18/指针数组/"
-     data-title="指针数组"
+        <div class="ds-share flat" data-thread-key="2015/09/15/JDK1.8.0_60---HashMap源码分析/"
+     data-title="JDK1.8.0_60---HashMap源码分析"
      data-content=""
-     data-url="http://linnever.github.io/2015/06/18/指针数组/">
+     data-url="http://linnever.github.io/2015/09/15/JDK1.8.0_60---HashMap源码分析/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -332,8 +310,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/06/18/指针数组/"
-                   data-title="指针数组" data-url="http://linnever.github.io/2015/06/18/指针数组/">
+              <div class="ds-thread" data-thread-key="2015/09/15/JDK1.8.0_60---HashMap源码分析/"
+                   data-title="JDK1.8.0_60---HashMap源码分析" data-url="http://linnever.github.io/2015/09/15/JDK1.8.0_60---HashMap源码分析/">
               </div>
             
           </div>
@@ -431,7 +409,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#指针数组"><span class="nav-number">1.</span> <span class="nav-text">指针数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#演示"><span class="nav-number">2.</span> <span class="nav-text">演示</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
