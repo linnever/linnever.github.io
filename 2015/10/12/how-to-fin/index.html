@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="JDK," />
 
 
 
@@ -35,19 +35,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="treansient的作用及使用方法
-我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化，java的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了Serilizable接口，这个类的所有属性和方法都会自动序列化。">
+<meta name="description" content="How do I find where JDK is installed on my windows machine?
+If you are using Linux/Unix/Mac OS X:
+Try this:1$ which java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java关键字transient">
-<meta property="og:url" content="http://linnever.github.io/2015/09/11/Java关键字transient/index.html">
+<meta property="og:title" content="how to fin">
+<meta property="og:url" content="http://linnever.github.io/2015/10/12/how-to-fin/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="treansient的作用及使用方法
-我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化，java的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了Serilizable接口，这个类的所有属性和方法都会自动序列化。">
-<meta property="og:updated_time" content="2015-09-13T03:10:36.567Z">
+<meta property="og:description" content="How do I find where JDK is installed on my windows machine?
+If you are using Linux/Unix/Mac OS X:
+Try this:1$ which java">
+<meta property="og:updated_time" content="2015-10-12T14:38:16.627Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java关键字transient">
-<meta name="twitter:description" content="treansient的作用及使用方法
-我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化，java的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了Serilizable接口，这个类的所有属性和方法都会自动序列化。">
+<meta name="twitter:title" content="how to fin">
+<meta name="twitter:description" content="How do I find where JDK is installed on my windows machine?
+If you are using Linux/Unix/Mac OS X:
+Try this:1$ which java">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -57,7 +60,7 @@
   };
 </script>
 
-  <title> Java关键字transient | Linnever </title>
+  <title> how to fin | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +196,7 @@
           
           
             
-              Java关键字transient
+              how to fin
             
           
         </h1>
@@ -202,8 +205,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-09-11T10:47:59+08:00" content="2015-09-11">
-            2015-09-11
+          <time itemprop="dateCreated" datetime="2015-10-12T22:37:16+08:00" content="2015-10-12">
+            2015-10-12
           </time>
         </span>
 
@@ -212,8 +215,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Java/" itemprop="url" rel="index">
-                  <span itemprop="name">Java</span>
+                <a href="/categories/JDK/" itemprop="url" rel="index">
+                  <span itemprop="name">JDK</span>
                 </a>
               </span>
 
@@ -228,8 +231,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/09/11/Java关键字transient/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/11/Java关键字transient/" itemprop="commentsCount"></span>
+              <a href="/2015/10/12/how-to-fin/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/12/how-to-fin/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -243,11 +246,11 @@
       
 
       
-        <span itemprop="articleBody"><p>treansient的作用及使用方法</p>
-<p>我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化，java的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了Serilizable接口，这个类的所有属性和方法都会自动序列化。<br><a id="more"></a><br>然而在实际开发过程中，我们常常会遇到这样的问题，这个类的有些属性需要序列化，而其他属性不需要被序列化，打个比方，如果一个用户有一些敏感信息（如密码，银行卡号等），为了安全起见，不希望在网络操作（主要涉及到序列化操作，本地序列化缓存也适用）中被传输，这些信息对应的变量就可以加上transient关键字。换句话说，这个字段的生命周期仅存于调用者的内存中而不会写到磁盘里持久化。</p>
-<p>总之，java 的transient关键字为我们提供了便利，你只需要实现Serilizable接口，将不需要序列化的属性前添加关键字transient，序列化对象的时候，这个属性就不会序列化到指定的目的地中。</p>
-<h2 id="Java对象序列化">Java对象序列化</h2><p>参考<a href="http://www.jianshu.com/p/56671a839f9c" target="_blank" rel="external">Java对象序列化</a></p>
-<h2 id="Java对象的序列化和反序列化">Java对象的序列化和反序列化</h2><p>参考<a href="http://www.cnblogs.com/CherishFX/p/4634407.html" target="_blank" rel="external">Java对象的序列化和反序列化</a></p>
+        <span itemprop="articleBody"><p>How do I find where JDK is installed on my windows machine?</p>
+<p>If you are using Linux/Unix/Mac OS X:</p>
+<p>Try this:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> java</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>If you are using Windows:<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">where</span> java </span><br><span class="line">or C:&gt; <span class="keyword">for</span> <span class="decorator">%i</span> <span class="keyword">in</span> (javac.exe) do @echo.   %~<span class="variable">$PATH</span>:i</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -256,7 +259,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
+            <a href="/tags/JDK/" rel="tag">#JDK</a>
           
         </div>
       
@@ -265,13 +268,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/13/JDK1.8.0_60---ArrayList源码分析/" rel="prev">JDK1.8.0_60---ArrayList源码分析</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/10/JDK1.8.0_60---LinkedList源码分析/" rel="next">JDK1.8.0_60---LinkedList源码分析</a>
+              <a href="/2015/09/15/JDK1.8.0_60---HashMap源码分析/" rel="next">JDK1.8.0_60---HashMap源码分析</a>
             
           </div>
         </div>
@@ -286,10 +287,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/09/11/Java关键字transient/"
-     data-title="Java关键字transient"
+        <div class="ds-share flat" data-thread-key="2015/10/12/how-to-fin/"
+     data-title="how to fin"
      data-content=""
-     data-url="http://linnever.github.io/2015/09/11/Java关键字transient/">
+     data-url="http://linnever.github.io/2015/10/12/how-to-fin/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -315,8 +316,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/09/11/Java关键字transient/"
-                   data-title="Java关键字transient" data-url="http://linnever.github.io/2015/09/11/Java关键字transient/">
+              <div class="ds-thread" data-thread-key="2015/10/12/how-to-fin/"
+                   data-title="how to fin" data-url="http://linnever.github.io/2015/10/12/how-to-fin/">
               </div>
             
           </div>
@@ -414,7 +415,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java对象序列化"><span class="nav-number">1.</span> <span class="nav-text">Java对象序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java对象的序列化和反序列化"><span class="nav-number">2.</span> <span class="nav-text">Java对象的序列化和反序列化</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
