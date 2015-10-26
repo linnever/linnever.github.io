@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="LeetCode," />
+  <meta name="keywords" content="JDK," />
 
 
 
@@ -35,25 +35,23 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Find Minimum in Rotated Sorted ArraySuppose a sorted array is rotated at some pivot unknown to you beforehand.
-(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
-Find the minimum element.
-You may assum">
+<meta name="description" content="多态
+多态是继数据抽象和继承之后的第三种基本特征
+多态通过分离做什么和怎么做。多态不但能过改善代码额组织结构和可读性，还能够创建可扩展的程序——无论什么时候，需要新功能的时候都能添加。多态的作用是消除类型的耦合关系（耦合：对象之间的依赖性，对象之间耦合度越高，维护成本越高。）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-153">
-<meta property="og:url" content="http://linnever.github.io/2015/07/19/LeetCode-153/index.html">
+<meta property="og:title" content="Skills">
+<meta property="og:url" content="http://linnever.github.io/2015/10/25/多态/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="Find Minimum in Rotated Sorted ArraySuppose a sorted array is rotated at some pivot unknown to you beforehand.
-(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
-Find the minimum element.
-You may assum">
-<meta property="og:updated_time" content="2015-08-11T17:02:00.822Z">
+<meta property="og:description" content="多态
+多态是继数据抽象和继承之后的第三种基本特征
+多态通过分离做什么和怎么做。多态不但能过改善代码额组织结构和可读性，还能够创建可扩展的程序——无论什么时候，需要新功能的时候都能添加。多态的作用是消除类型的耦合关系（耦合：对象之间的依赖性，对象之间耦合度越高，维护成本越高。）">
+<meta property="og:image" content="http://i.imgur.com/311Mfuc.jpg">
+<meta property="og:updated_time" content="2015-10-26T05:51:49.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-153">
-<meta name="twitter:description" content="Find Minimum in Rotated Sorted ArraySuppose a sorted array is rotated at some pivot unknown to you beforehand.
-(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
-Find the minimum element.
-You may assum">
+<meta name="twitter:title" content="Skills">
+<meta name="twitter:description" content="多态
+多态是继数据抽象和继承之后的第三种基本特征
+多态通过分离做什么和怎么做。多态不但能过改善代码额组织结构和可读性，还能够创建可扩展的程序——无论什么时候，需要新功能的时候都能添加。多态的作用是消除类型的耦合关系（耦合：对象之间的依赖性，对象之间耦合度越高，维护成本越高。）">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +61,7 @@ You may assum">
   };
 </script>
 
-  <title> LeetCode-153 | Linnever </title>
+  <title> Skills | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -199,7 +197,7 @@ You may assum">
           
           
             
-              LeetCode-153
+              Skills
             
           
         </h1>
@@ -208,8 +206,8 @@ You may assum">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-07-19T17:15:05+08:00" content="2015-07-19">
-            2015-07-19
+          <time itemprop="dateCreated" datetime="2015-10-25T22:37:16+08:00" content="2015-10-25">
+            2015-10-25
           </time>
         </span>
 
@@ -218,8 +216,8 @@ You may assum">
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                  <span itemprop="name">LeetCode</span>
+                <a href="/categories/JDK/" itemprop="url" rel="index">
+                  <span itemprop="name">JDK</span>
                 </a>
               </span>
 
@@ -234,8 +232,8 @@ You may assum">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/07/19/LeetCode-153/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/19/LeetCode-153/" itemprop="commentsCount"></span>
+              <a href="/2015/10/25/多态/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/25/多态/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -249,21 +247,30 @@ You may assum">
       
 
       
-        <span itemprop="articleBody"><h2 id="Find_Minimum_in_Rotated_Sorted_Array">Find Minimum in Rotated Sorted Array</h2><p>Suppose a sorted array is rotated at some pivot unknown to you beforehand.</p>
-<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
-<p>Find the minimum element.</p>
-<p>You may assume no duplicate exists in the array.</p>
-<h2 id="题目大意：">题目大意：</h2><p>据提交后了解到：</p>
+        <span itemprop="articleBody"><p>多态</p>
+<p><strong>多态是继数据抽象和继承之后的第三种基本特征</strong></p>
+<p>多态通过分离<strong>做什么</strong>和<strong>怎么做</strong>。多态不但能过改善代码额组织结构和可读性，还能够创建<strong>可扩展</strong>的程序——无论什么时候，需要新功能的时候都能添加。多态的作用是消除<strong>类型</strong>的耦合关系（耦合：对象之间的依赖性，对象之间耦合度越高，维护成本越高。）<br><a id="more"></a></p>
+<p>###绑定###</p>
+<p>概念：绑定指的是一个方法的调用与方法所在的类(方法主体)关联起来。对java来说，绑定分为静态绑定和动态绑定；或者叫做前期绑定和后期绑定。</p>
+<p>1.静态绑定：</p>
+<p>在程序执行前方法已经被绑定，此时由编译器或其它连接程序实现。针对java简单的可以理解为程序编译期的绑定；这里特别说明一点，java当中的方法只有<strong>final</strong>，<strong>static</strong>，<strong>private</strong>和构造方法是前期绑定。</p>
+<p>2.动态绑定：（<strong>针对的是方法</strong>）</p>
+<p>后期绑定：在运行时根据具体对象的类型进行绑定。<br>若一种语言实现了后期绑定，同时必须提供一些机制，可在运行期间判断对象的类型，并分别调用适当的方法。也就是说，编译器此时依然不知道对象的类型，但方法调用机制能自己去调查，找到正确的方法主体。不同的语言对后期绑定的实现方法是有所区别的。但我们至少可以这样认为：它们都要在对象中安插某些特殊类型的信息。</p>
+<p><strong>多态表现形式：</strong></p>
 <ol>
-<li>该数组实在单调递增的情况下的</li>
-<li>该数组可能就是单调递增的，也可能是在某个节点旋转了。</li>
+<li>父类的引用页可以接收自己的子类对象。</li>
+<li>父类的引用指向自己的子类对象。</li>
 </ol>
-<a id="more"></a>
-<h2 id="解题思路：">解题思路：</h2><ol>
-<li>看到排序，然后又要查找，一般就是二分查找法。</li>
+<ol>
+<li>静态方法属于类方法（static修饰，对应的是实例方法，实例方法是要通过创建对象，实例化才能通过对象掉用的方法，类方法可以直接通过类来调用）是静态绑定。</li>
+<li>非静态方法属于动态绑定</li>
+<li>属性成员都属于静态绑定，只和声明的类型相关。（动态方法才有override（重写），静态方法，静态域，动态域都是不会被覆盖的）</li>
 </ol>
-<h2 id="解体答案：">解体答案：</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//O(lgn)</span><br><span class="line">public class Solution &#123;</span><br><span class="line">    public int findMin(int[] <span class="built_in">num</span>) &#123;</span><br><span class="line">      int <span class="built_in">len</span> = <span class="built_in">num</span>.<span class="built_in">length</span>;  </span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">len</span> == <span class="number">1</span>) <span class="constant">return</span> <span class="built_in">num</span>[<span class="number">0</span>];  </span><br><span class="line">        int left = <span class="number">0</span>, <span class="constant">right</span> = <span class="built_in">len</span>-<span class="number">1</span>;  </span><br><span class="line">        <span class="keyword">while</span> (<span class="built_in">num</span>[left] &gt; <span class="built_in">num</span>[<span class="constant">right</span>]) &#123;<span class="comment"> // good idea  </span></span><br><span class="line">            int <span class="keyword">mid</span> = (left + <span class="constant">right</span>) / <span class="number">2</span>;  </span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">num</span>[<span class="keyword">mid</span>] &gt; <span class="built_in">num</span>[<span class="constant">right</span>]) &#123;  </span><br><span class="line">                left = <span class="keyword">mid</span> + <span class="number">1</span>;  </span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">                <span class="constant">right</span> = <span class="keyword">mid</span>;<span class="comment"> // be careful, not mid-1, as num[mid] maybe the minimum  </span></span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="constant">return</span> <span class="built_in">num</span>[left];  </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">\\O(lgn) <span class="operator">not</span> good enough</span><br><span class="line">public int findMin1(int[] <span class="built_in">num</span>) &#123;</span><br><span class="line">int <span class="built_in">len</span> = <span class="built_in">num</span>.<span class="built_in">length</span>;  </span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">len</span> == <span class="number">1</span>) &#123;  </span><br><span class="line">            <span class="constant">return</span> <span class="built_in">num</span>[<span class="number">0</span>];  </span><br><span class="line">        &#125;  </span><br><span class="line">          </span><br><span class="line">        <span class="keyword">for</span> (int i = <span class="number">1</span>; i &lt; <span class="built_in">len</span>; i++) &#123;  </span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">num</span>[i] &lt; <span class="built_in">num</span>[i-<span class="number">1</span>]) &#123;  </span><br><span class="line">                <span class="constant">return</span> <span class="built_in">num</span>[i];  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">          </span><br><span class="line">        <span class="constant">return</span> <span class="built_in">num</span>[<span class="number">0</span>]; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>Father fson=new Son();</p>
+<p>创建一个Son的对象，并把得到的引用立即赋值给Father。fson是父类的引用，类型是Father。</p>
+<p>fson调用的静态域，静态方法都是Father的方法，与子类无关。</p>
+<p>如果子类Sun中重写了父类的方法，那向上转型中，子类转型为父类的类型，类接口中只可能会丢失方法（子类是父类的超集，丢失子类有而父类没有的方法），那么fsun就不能调用丢失的方法（即父类没有的方法而子类有的方法），但是可以调用子类重写的方法（不是父类的方法），不能调用父类被重写的方法。</p>
+<p><img src="http://i.imgur.com/311Mfuc.jpg" alt=""></p>
 </span>
       
     </div>
@@ -272,7 +279,7 @@ You may assum">
       
         <div class="post-tags">
           
-            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
+            <a href="/tags/JDK/" rel="tag">#JDK</a>
           
         </div>
       
@@ -281,13 +288,11 @@ You may assum">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/20/LeetCode-41/" rel="prev">LeetCode-41</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/18/LeetCode-219/" rel="next">LeetCode-219</a>
+              <a href="/2015/10/12/Skills/" rel="next">Skills</a>
             
           </div>
         </div>
@@ -302,10 +307,10 @@ You may assum">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/07/19/LeetCode-153/"
-     data-title="LeetCode-153"
+        <div class="ds-share flat" data-thread-key="2015/10/25/多态/"
+     data-title="Skills"
      data-content=""
-     data-url="http://linnever.github.io/2015/07/19/LeetCode-153/">
+     data-url="http://linnever.github.io/2015/10/25/多态/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -331,8 +336,8 @@ You may assum">
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/07/19/LeetCode-153/"
-                   data-title="LeetCode-153" data-url="http://linnever.github.io/2015/07/19/LeetCode-153/">
+              <div class="ds-thread" data-thread-key="2015/10/25/多态/"
+                   data-title="Skills" data-url="http://linnever.github.io/2015/10/25/多态/">
               </div>
             
           </div>
@@ -430,7 +435,7 @@ You may assum">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Find_Minimum_in_Rotated_Sorted_Array"><span class="nav-number">1.</span> <span class="nav-text">Find Minimum in Rotated Sorted Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意："><span class="nav-number">2.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路："><span class="nav-number">3.</span> <span class="nav-text">解题思路：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解体答案："><span class="nav-number">4.</span> <span class="nav-text">解体答案：</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
