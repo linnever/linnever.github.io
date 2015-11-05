@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -35,22 +35,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="git error
-Error: Permission denied (publickey)you can see this
-my error如果你把电脑语言从英文改成中文。c盘目录下的用户文件会替换掉User文件夹。在添加新的ssh的时候，目录还会是user的目录。所以github官方会拒绝你的链接。">
+<meta name="description" content="Avoid “magic numbers”
+《Code Complete》 SAYS:
+Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that support">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git error">
-<meta property="og:url" content="http://linnever.github.io/2015/08/12/git-error/index.html">
+<meta property="og:title" content="Avoding magic number">
+<meta property="og:url" content="http://linnever.github.io/2015/11/05/Avoding-magic-number/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="git error
-Error: Permission denied (publickey)you can see this
-my error如果你把电脑语言从英文改成中文。c盘目录下的用户文件会替换掉User文件夹。在添加新的ssh的时候，目录还会是user的目录。所以github官方会拒绝你的链接。">
-<meta property="og:updated_time" content="2015-09-13T03:12:48.958Z">
+<meta property="og:description" content="Avoid “magic numbers”
+《Code Complete》 SAYS:
+Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that support">
+<meta property="og:updated_time" content="2015-11-05T15:17:46.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git error">
-<meta name="twitter:description" content="git error
-Error: Permission denied (publickey)you can see this
-my error如果你把电脑语言从英文改成中文。c盘目录下的用户文件会替换掉User文件夹。在添加新的ssh的时候，目录还会是user的目录。所以github官方会拒绝你的链接。">
+<meta name="twitter:title" content="Avoding magic number">
+<meta name="twitter:description" content="Avoid “magic numbers”
+《Code Complete》 SAYS:
+Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that support">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +60,7 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
   };
 </script>
 
-  <title> git error | Linnever </title>
+  <title> Avoding magic number | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -196,7 +196,7 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
           
           
             
-              git error
+              Avoding magic number
             
           
         </h1>
@@ -205,8 +205,8 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-12T03:24:26+08:00" content="2015-08-12">
-            2015-08-12
+          <time itemprop="dateCreated" datetime="2015-11-05T22:34:01+08:00" content="2015-11-05">
+            2015-11-05
           </time>
         </span>
 
@@ -215,8 +215,8 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/git/" itemprop="url" rel="index">
-                  <span itemprop="name">git</span>
+                <a href="/categories/Java/" itemprop="url" rel="index">
+                  <span itemprop="name">Java</span>
                 </a>
               </span>
 
@@ -231,8 +231,8 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/12/git-error/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/12/git-error/" itemprop="commentsCount"></span>
+              <a href="/2015/11/05/Avoding-magic-number/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/05/Avoding-magic-number/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -246,9 +246,20 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
       
 
       
-        <span itemprop="articleBody"><p>git error</p>
-<p>Error: Permission denied (publickey)<br>you can see <a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">this</a></p>
-<h2 id="my_error">my error</h2><p>如果你把电脑语言从英文改成中文。c盘目录下的<strong>用户</strong>文件会替换掉<strong>User</strong>文件夹。在添加新的ssh的时候，目录还会是<strong>user</strong>的目录。所以github官方会拒绝你的链接。</p>
+        <span itemprop="articleBody"><p>Avoid “magic numbers”</p>
+<p>《<strong>Code Complete</strong>》 SAYS:</p>
+<p>Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that supports named constants,use them instead.If you can’t use named constants,use global variables when it is feasible to.</p>
+<!--READMORE-->
+<p>Avoiding magic numbers yields three advantages:</p>
+<ul>
+<li>Changes can be made more reliably.If you use named constants,you won’t overlook one of the 100s, or change a 100 that refers to someting else.</li>
+<li>Changes can be made more easily.When the maxinum number of entries changes from<br>100 to 200,if you are using magic number you have to find all the 100s and chan<em>**</em>ge them to 200s.If you are use 100+1 or 100-1 you ‘ll also have to find all the 101s and 99s and change them  from 201s to 199s.If you are using a named constands,you simply change the definition of the constant from 100 to 200 in one place.</li>
+<li>Your code is more readable.</li>
+</ul>
+<p><strong>note:</strong><br>Replacing numbers by constants makes sense if the number carries a meaning that is not inherently obvious by looking at its value alone.</p>
+<p>For instance,<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">productType = 221; // BAD: the number needs to be looked up somewhere to <span class="keyword">understand</span> its meaning</span><br><span class="line">productType = PRODUCT_TYPE_CONSUMABLE; // GOOD: the constant <span class="keyword">is</span> self-describing</span><br></pre></td></tr></table></figure></p>
+<p>On the other hand,<br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int initialCount = <span class="number">0</span>; // GOOD: <span class="keyword">in</span> this <span class="keyword">context</span> zero really means zero</span><br><span class="line">int initialCount = ZERO; // BAD: the number value <span class="keyword">is</span> clear, <span class="keyword">and</span> there<span class="attribute">'s</span> no need <span class="keyword">to</span> add a self-referencing <span class="keyword">constant</span> name <span class="keyword">if</span> there<span class="attribute">'s</span> no other meaning</span><br></pre></td></tr></table></figure></p>
+<p>In Java ,using constants may let programs run fast.</p>
 </span>
       
     </div>
@@ -257,7 +268,7 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
         </div>
       
@@ -266,13 +277,11 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/19/Softwares/" rel="prev">Softwares</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/20/LeetCode-41/" rel="next">LeetCode-41</a>
+              <a href="/2015/10/25/多态/" rel="next">多态</a>
             
           </div>
         </div>
@@ -287,10 +296,10 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/08/12/git-error/"
-     data-title="git error"
+        <div class="ds-share flat" data-thread-key="2015/11/05/Avoding-magic-number/"
+     data-title="Avoding magic number"
      data-content=""
-     data-url="http://linnever.github.io/2015/08/12/git-error/">
+     data-url="http://linnever.github.io/2015/11/05/Avoding-magic-number/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -316,8 +325,8 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/12/git-error/"
-                   data-title="git error" data-url="http://linnever.github.io/2015/08/12/git-error/">
+              <div class="ds-thread" data-thread-key="2015/11/05/Avoding-magic-number/"
+                   data-title="Avoding magic number" data-url="http://linnever.github.io/2015/11/05/Avoding-magic-number/">
               </div>
             
           </div>
@@ -415,7 +424,7 @@ my error如果你把电脑语言从英文改成中文。c盘目录下的用户�
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#my_error"><span class="nav-number">1.</span> <span class="nav-text">my error</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

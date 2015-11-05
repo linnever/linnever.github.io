@@ -191,6 +191,103 @@
           
           
             
+              <a class="post-title-link" href="/2015/11/05/Avoding-magic-number/" itemprop="url">
+                Avoding magic number
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-05T22:34:01+08:00" content="2015-11-05">
+            2015-11-05
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Java/" itemprop="url" rel="index">
+                  <span itemprop="name">Java</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/05/Avoding-magic-number/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/05/Avoding-magic-number/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>Avoid “magic numbers”</p>
+<p>《<strong>Code Complete</strong>》 SAYS:</p>
+<p>Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that supports named constants,use them instead.If you can’t use named constants,use global variables when it is feasible to.</p>
+<!--READMORE-->
+<p>Avoiding magic numbers yields three advantages:</p>
+<ul>
+<li>Changes can be made more reliably.If you use named constants,you won’t overlook one of the 100s, or change a 100 that refers to someting else.</li>
+<li>Changes can be made more easily.When the maxinum number of entries changes from<br>100 to 200,if you are using magic number you have to find all the 100s and chan<em>**</em>ge them to 200s.If you are use 100+1 or 100-1 you ‘ll also have to find all the 101s and 99s and change them  from 201s to 199s.If you are using a named constands,you simply change the definition of the constant from 100 to 200 in one place.</li>
+<li>Your code is more readable.</li>
+</ul>
+<p><strong>note:</strong><br>Replacing numbers by constants makes sense if the number carries a meaning that is not inherently obvious by looking at its value alone.</p>
+<p>For instance,<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">productType = 221; // BAD: the number needs to be looked up somewhere to <span class="keyword">understand</span> its meaning</span><br><span class="line">productType = PRODUCT_TYPE_CONSUMABLE; // GOOD: the constant <span class="keyword">is</span> self-describing</span><br></pre></td></tr></table></figure></p>
+<p>On the other hand,<br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int initialCount = <span class="number">0</span>; // GOOD: <span class="keyword">in</span> this <span class="keyword">context</span> zero really means zero</span><br><span class="line">int initialCount = ZERO; // BAD: the number value <span class="keyword">is</span> clear, <span class="keyword">and</span> there<span class="attribute">'s</span> no need <span class="keyword">to</span> add a self-referencing <span class="keyword">constant</span> name <span class="keyword">if</span> there<span class="attribute">'s</span> no other meaning</span><br></pre></td></tr></table></figure></p>
+<p>In Java ,using constants may let programs run fast.</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/10/25/多态/" itemprop="url">
                 多态
               </a>
@@ -980,92 +1077,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/08/12/git-error/" itemprop="url">
-                git error
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-08-12T03:24:26+08:00" content="2015-08-12">
-            2015-08-12
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/git/" itemprop="url" rel="index">
-                  <span itemprop="name">git</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/12/git-error/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/12/git-error/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>git error</p>
-<p>Error: Permission denied (publickey)<br>you can see <a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">this</a></p>
-<h2 id="my_error">my error</h2><p>如果你把电脑语言从英文改成中文。c盘目录下的<strong>用户</strong>文件会替换掉<strong>User</strong>文件夹。在添加新的ssh的时候，目录还会是<strong>user</strong>的目录。所以github官方会拒绝你的链接。</p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1104,7 +1115,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
