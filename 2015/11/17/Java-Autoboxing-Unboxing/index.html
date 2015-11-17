@@ -35,22 +35,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Avoid “magic numbers”
-《Code Complete》 SAYS:
-Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that support">
+<meta name="description" content="Java-Autoboxing-and-UnboxingAutoboxing and unboxing is introduced in Java1.5 to automatically convert primitive type into boxed primitive(Object or Wrapper class).Autoboxing allows you to use primitiv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Avoding magic number">
-<meta property="og:url" content="http://linnever.github.io/2015/11/05/Avoding-magic-number/index.html">
+<meta property="og:title" content="Java-Autoboxing-and-Unboxing">
+<meta property="og:url" content="http://linnever.github.io/2015/11/17/Java-Autoboxing-Unboxing/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="Avoid “magic numbers”
-《Code Complete》 SAYS:
-Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that support">
-<meta property="og:updated_time" content="2015-11-06T02:36:09.427Z">
+<meta property="og:description" content="Java-Autoboxing-and-UnboxingAutoboxing and unboxing is introduced in Java1.5 to automatically convert primitive type into boxed primitive(Object or Wrapper class).Autoboxing allows you to use primitiv">
+<meta property="og:updated_time" content="2015-11-17T11:53:12.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Avoding magic number">
-<meta name="twitter:description" content="Avoid “magic numbers”
-《Code Complete》 SAYS:
-Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that support">
+<meta name="twitter:title" content="Java-Autoboxing-and-Unboxing">
+<meta name="twitter:description" content="Java-Autoboxing-and-UnboxingAutoboxing and unboxing is introduced in Java1.5 to automatically convert primitive type into boxed primitive(Object or Wrapper class).Autoboxing allows you to use primitiv">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +54,7 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
   };
 </script>
 
-  <title> Avoding magic number | Linnever </title>
+  <title> Java-Autoboxing-and-Unboxing | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -196,7 +190,7 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
           
           
             
-              Avoding magic number
+              Java-Autoboxing-and-Unboxing
             
           
         </h1>
@@ -205,8 +199,8 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-05T22:34:01+08:00" content="2015-11-05">
-            2015-11-05
+          <time itemprop="dateCreated" datetime="2015-11-17T19:52:31+08:00" content="2015-11-17">
+            2015-11-17
           </time>
         </span>
 
@@ -231,8 +225,8 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/05/Avoding-magic-number/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/05/Avoding-magic-number/" itemprop="commentsCount"></span>
+              <a href="/2015/11/17/Java-Autoboxing-Unboxing/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/17/Java-Autoboxing-Unboxing/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -246,20 +240,58 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
       
 
       
-        <span itemprop="articleBody"><p>Avoid “magic numbers”</p>
-<p>《<strong>Code Complete</strong>》 SAYS:</p>
-<p>Magic numbers are literal numbers such as 100 or 47524 that appear in the middle of a program without explanation.If your program in a language that supports named constants,use them instead.If you can’t use named constants,use global variables when it is feasible to.</p>
-<a id="more"></a>
-<p>Avoiding magic numbers yields three advantages:</p>
-<ul>
-<li>Changes can be made more reliably.If you use named constants,you won’t overlook one of the 100s, or change a 100 that refers to someting else.</li>
-<li>Changes can be made more easily.When the maxinum number of entries changes from<br>100 to 200,if you are using magic number you have to find all the 100s and chan<em>**</em>ge them to 200s.If you are use 100+1 or 100-1 you ‘ll also have to find all the 101s and 99s and change them  from 201s to 199s.If you are using a named constands,you simply change the definition of the constant from 100 to 200 in one place.</li>
-<li>Your code is more readable.</li>
+        <span itemprop="articleBody"><h1 id="Java-Autoboxing-and-Unboxing">Java-Autoboxing-and-Unboxing</h1><p>Autoboxing and unboxing is introduced in Java1.5 to automatically convert primitive type into boxed primitive(Object or Wrapper class).Autoboxing allows you to use primitive and object type interchangeably in Java on many place like assignment,method invocation.<br><a id="more"></a><br>If you hava been using <strong>Collecions </strong>like HashMap or ArrayList before Java 1.5 then you are familiar with the issues like you can not directly put primitives into Collections, instead you first need to convert them into Object only then only you can put them into Collections. Wrapper class like Integer, Double and Boolean helps for converting primitive to Object but that clutter the code. With the introduction of autoboxing and unboxing in Java this primitive to object conversion happens automatically by Java compiler which makes code more readable.But autoboxing and unboxing comes with certain caveats which needs to be understood before using them in production code and it becomes even more important because they are automatic and can create subtle bugs if you are not sure when autoboxing  in Java code occurs and when unboxing happens.</p>
+<h2 id="What_is_autoboxing_and_unboxing_in_Java">What is autoboxing and unboxing in Java</h2><p><strong>autoboxing and unboxing</strong> :converts a primitive type like int into corresponding wrapper class object e.g. Integer.opposite case is called <strong>unboxing</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Primitive type</th>
+<th style="text-align:center">Wrapper class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bollean</td>
+<td style="text-align:center">Boolean</td>
+</tr>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">Byte</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">Character</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">Float</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Integer</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">Long</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">Short</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">Double</td>
+</tr>
+</tbody>
+</table>
+<h2 id="When_does_autoboxing_and_unboxing_occurs_in_Java">When does autoboxing and unboxing occurs in Java</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//before autoboxing</span></span><br><span class="line"><span class="type">Integer</span> <span class="class"><span class="keyword">object</span><span class="title">=Integer</span>.<span class="title">valueOf</span>(</span><span class="number">3</span>);</span><br><span class="line"><span class="type">Int</span> primoitive=<span class="class"><span class="keyword">object</span>.<span class="title">intValue</span>(</span>);</span><br><span class="line"><span class="comment">//after java5</span></span><br><span class="line"><span class="type">Integer</span> <span class="class"><span class="keyword">object</span><span class="title">=3</span>;</span><span class="comment">//autoboxing -primitive to wrapper conversion</span></span><br><span class="line">int iPrimitive = iObject; <span class="comment">//unboxing - object to primitive conversion</span></span><br></pre></td></tr></table></figure>
+<h2 id="Unnecessary_Object_creation_due_to_Autoboxing_in_Java">Unnecessary Object creation due to Autoboxing in Java</h2><p>One of the danger of autoboxing is throw away object which gets created if autoboxing occurs in a loop.Here is an example of how unnecessary object can slow down your application:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer sum=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1000</span>;i&lt;<span class="number">5000</span>;i++)</span><br><span class="line">sum+=i;</span><br></pre></td></tr></table></figure></p>
+<p>In this code <code>sum+=i</code> will expand as <code>sum=sum+i</code> and since + operator is not applicable to Integer object it will trigger unboxing of sum Integer object and then autoboxing of result which will be stored in sum which is Integer as shown below :<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sum = sum.intValue() + i;</span><br><span class="line"><span class="type">Integer</span> sum = new <span class="type">Integer</span>(<span class="literal">result</span>);</span><br></pre></td></tr></table></figure></p>
+<p>here since sum is Integer, it will create around 4000 unnecessary Intger object which are just throw away and if this happens on large scale has It potential to slow down system with frequent GC for arithmetic calculation always prefer primitive over boxed primitive and look for unintentional autoboxing in Java.</p>
+<h2 id="Reference">Reference</h2><ul>
+<li><a href="http://javarevisited.blogspot.com/2012/07/auto-boxing-and-unboxing-in-java-be.html" target="_blank" rel="external">http://javarevisited.blogspot.com/2012/07/auto-boxing-and-unboxing-in-java-be.html</a></li>
+<li><a href="http://droidyue.com/blog/2015/04/07/autoboxing-and-autounboxing-in-java/" target="_blank" rel="external">http://droidyue.com/blog/2015/04/07/autoboxing-and-autounboxing-in-java/</a></li>
 </ul>
-<p><strong>note:</strong><br>Replacing numbers by constants makes sense if the number carries a meaning that is not inherently obvious by looking at its value alone.</p>
-<p>For instance,<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">productType = 221; // BAD: the number needs to be looked up somewhere to <span class="keyword">understand</span> its meaning</span><br><span class="line">productType = PRODUCT_TYPE_CONSUMABLE; // GOOD: the constant <span class="keyword">is</span> self-describing</span><br></pre></td></tr></table></figure></p>
-<p>On the other hand,<br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int initialCount = <span class="number">0</span>; // GOOD: <span class="keyword">in</span> this <span class="keyword">context</span> zero really means zero</span><br><span class="line">int initialCount = ZERO; // BAD: the number value <span class="keyword">is</span> clear, <span class="keyword">and</span> there<span class="attribute">'s</span> no need <span class="keyword">to</span> add a self-referencing <span class="keyword">constant</span> name <span class="keyword">if</span> there<span class="attribute">'s</span> no other meaning</span><br></pre></td></tr></table></figure></p>
-<p>In Java ,using constants may let programs run fast.</p>
 </span>
       
     </div>
@@ -277,13 +309,11 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/17/Java-Reflection/" rel="prev">Java Reflection</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/25/多态/" rel="next">多态</a>
+              <a href="/2015/11/17/Java-Reflection/" rel="next">Java Reflection</a>
             
           </div>
         </div>
@@ -298,10 +328,10 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/11/05/Avoding-magic-number/"
-     data-title="Avoding magic number"
+        <div class="ds-share flat" data-thread-key="2015/11/17/Java-Autoboxing-Unboxing/"
+     data-title="Java-Autoboxing-and-Unboxing"
      data-content=""
-     data-url="http://linnever.github.io/2015/11/05/Avoding-magic-number/">
+     data-url="http://linnever.github.io/2015/11/17/Java-Autoboxing-Unboxing/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -327,8 +357,8 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/11/05/Avoding-magic-number/"
-                   data-title="Avoding magic number" data-url="http://linnever.github.io/2015/11/05/Avoding-magic-number/">
+              <div class="ds-thread" data-thread-key="2015/11/17/Java-Autoboxing-Unboxing/"
+                   data-title="Java-Autoboxing-and-Unboxing" data-url="http://linnever.github.io/2015/11/17/Java-Autoboxing-Unboxing/">
               </div>
             
           </div>
@@ -426,7 +456,7 @@ Magic numbers are literal numbers such as 100 or 47524 that appear in the middle
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-Autoboxing-and-Unboxing"><span class="nav-number">1.</span> <span class="nav-text">Java-Autoboxing-and-Unboxing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What_is_autoboxing_and_unboxing_in_Java"><span class="nav-number">1.1.</span> <span class="nav-text">What is autoboxing and unboxing in Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#When_does_autoboxing_and_unboxing_occurs_in_Java"><span class="nav-number">1.2.</span> <span class="nav-text">When does autoboxing and unboxing occurs in Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unnecessary_Object_creation_due_to_Autoboxing_in_Java"><span class="nav-number">1.3.</span> <span class="nav-text">Unnecessary Object creation due to Autoboxing in Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.4.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
