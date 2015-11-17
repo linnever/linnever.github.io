@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="【算法,java,排序】," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -35,16 +35,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="希尔排序又称缩小增量排序，只要最后一个增量是1，任何的序列都是可行的。在使用增量H之后，对于每一个i,我们有A[i]&amp;lt;=A[i+H],及所有相隔H的元素都被排序">
+<meta name="description" content="Java Reflection“Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in Java Virtual machine.” The concept is ofen mixed">
 <meta property="og:type" content="article">
-<meta property="og:title" content="希尔排序">
-<meta property="og:url" content="http://linnever.github.io/2015/05/27/希尔排序/index.html">
+<meta property="og:title" content="Java Reflection">
+<meta property="og:url" content="http://linnever.github.io/2015/11/17/Java-Reflection/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="希尔排序又称缩小增量排序，只要最后一个增量是1，任何的序列都是可行的。在使用增量H之后，对于每一个i,我们有A[i]&amp;lt;=A[i+H],及所有相隔H的元素都被排序">
-<meta property="og:updated_time" content="2015-08-11T17:01:31.264Z">
+<meta property="og:description" content="Java Reflection“Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in Java Virtual machine.” The concept is ofen mixed">
+<meta property="og:updated_time" content="2015-11-17T06:31:37.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="希尔排序">
-<meta name="twitter:description" content="希尔排序又称缩小增量排序，只要最后一个增量是1，任何的序列都是可行的。在使用增量H之后，对于每一个i,我们有A[i]&amp;lt;=A[i+H],及所有相隔H的元素都被排序">
+<meta name="twitter:title" content="Java Reflection">
+<meta name="twitter:description" content="Java Reflection“Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in Java Virtual machine.” The concept is ofen mixed">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -54,7 +54,7 @@
   };
 </script>
 
-  <title> 希尔排序 | Linnever </title>
+  <title> Java Reflection | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -190,7 +190,7 @@
           
           
             
-              希尔排序
+              Java Reflection
             
           
         </h1>
@@ -199,8 +199,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-27T14:16:36+08:00" content="2015-05-27">
-            2015-05-27
+          <time itemprop="dateCreated" datetime="2015-11-17T14:37:16+08:00" content="2015-11-17">
+            2015-11-17
           </time>
         </span>
 
@@ -209,8 +209,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Algorithm-and-Data-Structures/" itemprop="url" rel="index">
-                  <span itemprop="name">Algorithm and Data Structures</span>
+                <a href="/categories/Java/" itemprop="url" rel="index">
+                  <span itemprop="name">Java</span>
                 </a>
               </span>
 
@@ -225,8 +225,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/27/希尔排序/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/27/希尔排序/" itemprop="commentsCount"></span>
+              <a href="/2015/11/17/Java-Reflection/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/17/Java-Reflection/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -240,15 +240,130 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="希尔排序">希尔排序</h2><p><strong>又称缩小增量排序</strong>，只要最后一个增量是1，任何的序列都是可行的。在使用增量H之后，对于每一个i,我们有A[i]&lt;=A[i+H],及所有相隔H的元素都被排序<br><a id="more"></a></p>
+        <span itemprop="articleBody"><h1 id="Java_Reflection">Java Reflection</h1><p>“Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in Java Virtual machine.” The concept is ofen mixed with introspecion.The following are their definitions from Wiki:<br><a id="more"></a></p>
+<h2 id="what_is_Introspection_and_reflection?">what is Introspection and reflection?</h2><ol>
+<li>Introspection is the ability of a program to examine the type or properties of an object at runtime.</li>
+<li>Relection is the ability of a program to examine and modify the structure and behavior of an object at runtime.</li>
+</ol>
+<h2 id="Why_do_we_need_reflection?">Why do we need reflection?</h2><ol>
+<li>Examine an object’s class at runtime</li>
+<li>Construct an object for a class at runtime</li>
+<li>Examine a class’s field adn method at runtime</li>
+<li>Invoke any method of an object at runtime</li>
+<li>Change accessibility flag of Constructor, Method,Field</li>
+<li>etc.</li>
+</ol>
+<p>For example, JUnit use reflection to look through methods tagged with the @Test annotation, and then call those methods when running the unit test. <a href="http://www.programcreek.com/2012/02/junit-tutorial-2-annotations/" target="_blank" rel="external">(Here is a set of examples of how to use JUnit.)</a></p>
+<p>For web frameworks, product developers define their own implementation of interfaces and classes and put is in the configuration files. Using reflection,it can quickly dynamically initialize the classes required.</p>
+<p>For example ,Spring uses bean configuration such as<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean <span class="property">id</span>=<span class="string">"someID"</span> <span class="type">class</span>=<span class="string">"com.Foo"</span>&gt;</span><br><span class="line">  &lt;<span class="keyword">property</span> <span class="property">name</span>=<span class="string">"someField"</span> value=<span class="string">"someValue"</span>/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
+<p>When the Spring context processes this <bean> element,it will use Class.forName(String) with the arguement”com.Foo”   to instantiate the Class.It will then again use Reflection to get the appropriate setter for the <property> element and set its value to the sepcified value.</property></bean></p>
+<p>The same mechanism is also used for Servlet web application<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">&lt;Servlet&gt;</span></span><br><span class="line">  <span class="variable">&lt;Servlet-name&gt;</span>someServlet<span class="variable">&lt;/Servlet-name&gt;</span></span><br><span class="line">  <span class="variable">&lt;Servlet-class&gt;</span>com.Foo<span class="variable">&lt;/Servlet-class&gt;</span></span><br><span class="line"><span class="variable">&lt;Servlet&gt;</span></span><br><span class="line">``` </span><br><span class="line"><span class="comment">## how to use reflection?</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### Example 1: Get Class name from object</span></span><br></pre></td></tr></table></figure></p>
+<p>package myreflection;<br>import java.lang.reflect.Method;</p>
+<p>public class ReflectionHelloWorld {<br>    public static void main(String[] args){<br>        Foo f = new Foo();<br>        System.out.println(f.getClass().getName());<br>    }<br>}</p>
+<p>class Foo {<br>    public void print() {<br>        System.out.println(“abc”);<br>    }<br>}<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">Output:</span></span><br></pre></td></tr></table></figure></p>
+<p>myreflection.Foo<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Example 2:Invoke method on unknown object</span></span><br><span class="line"><span class="type">For</span> the code example blow ,image the types <span class="keyword">of</span> an <span class="keyword">object</span> <span class="keyword">is</span> unknown.<span class="type">By</span> <span class="keyword">using</span> reflection,the code can use the <span class="keyword">object</span> <span class="keyword">and</span> find <span class="keyword">out</span> <span class="keyword">if</span> the <span class="keyword">object</span> has a <span class="keyword">method</span> called <span class="string">"print"</span> <span class="keyword">and</span> the call it.</span><br></pre></td></tr></table></figure></p>
+<p>package myreflection;<br>import java.lang.reflect.Method;</p>
+<p>public class ReflectionHelloWorld {<br>    public static void main(String[] args){<br>        Foo f = new Foo();</p>
+<pre><code>    <span class="type">Method</span> <span class="keyword">method</span>;
+    <span class="keyword">try</span> {
+        <span class="keyword">method</span> = f.getClass().getMethod(<span class="string">"print"</span>, new <span class="type">Class</span>&lt;?&gt;[<span class="number">0</span>]);
+        <span class="keyword">method</span>.invoke(f);
+    } catch (<span class="type">Exception</span> e) {
+        e.printStackTrace();
+    }            
+}
+</code></pre><p>}</p>
+<p>class Foo {<br>    public void print() {<br>        System.out.println(“abc”);<br>    }<br>}<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">### Example 3: <span class="operator"><span class="keyword">Create</span> <span class="keyword">object</span> <span class="keyword">from</span> <span class="keyword">Class</span> <span class="keyword">instance</span></span></span><br></pre></td></tr></table></figure></p>
+<p>package myreflection;</p>
+<p>public class ReflectionHelloWorld {<br>    public static void main(String[] args){<br>        //create instance of “Class”<br>        Class&lt;?&gt; c = null;<br>        try{<br>            c=Class.forName(“myreflection.Foo”);<br>        }catch(Exception e){<br>            e.printStackTrace();<br>        }</p>
+<pre><code>    //create<span class="instruction"> instance </span>of <span class="string">"Foo"</span>
+    Foo f = null;
+
+    try {
+        f =<span class="function"> (</span>Foo<span class="function">)</span><span class="function"> c.newInstance(</span><span class="function">)</span>;
+    } catch<span class="function"> (</span>Exception e<span class="function">)</span> {
+       <span class="function"> e.printStackTrace(</span><span class="function">)</span>;
+    }    
+
+   <span class="function"> f.print(</span><span class="function">)</span>;
+}
+</code></pre><p>}</p>
+<p>class Foo {<br>    public void print() {<br>        System.out.println(“abc”);<br>    }<br>}<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">### Example <span class="number">4</span>: Get <span class="function"><span class="keyword">constructor</span> <span class="title">and</span> <span class="title">create</span> <span class="title">instance</span></span></span><br></pre></td></tr></table></figure></p>
+<p>package myreflection;</p>
+<p>import java.lang.reflect.Constructor;</p>
+<p>public class ReflectionHelloWorld {<br>    public static void main(String[] args){<br>        //create instance of “Class”<br>        Class&lt;?&gt; c = null;<br>        try{<br>            c=Class.forName(“myreflection.Foo”);<br>        }catch(Exception e){<br>            e.printStackTrace();<br>        }</p>
+<pre><code>    <span class="comment">//create instance of "Foo"</span>
+    Foo f1 = null;
+    Foo f2 = null;
+
+    <span class="comment">//get all constructors</span>
+    <span class="function"><span class="keyword">Constructor</span>&lt;?&gt; <span class="title">cons</span>[] = <span class="title">c</span>.<span class="title">getConstructors</span><span class="params">()</span>;</span>
+
+    <span class="keyword">try</span> <span class="comment">{
+        f1 = (Foo) cons[0].newInstance();
+        f2 = (Foo) cons[1].newInstance("abc");
+    }</span> catch (Exception e) <span class="comment">{
+        e.printStackTrace();
+    }</span>    
+
+    f1.print();
+    f2.print();
+}
+</code></pre><p>}</p>
+<p>class Foo {<br>    String s; </p>
+<pre><code><span class="function"><span class="keyword">public</span> <span class="title">Foo</span>(<span class="params"></span>)</span>{}
+
+<span class="function"><span class="keyword">public</span> <span class="title">Foo</span>(<span class="params">String s</span>)</span>{
+    <span class="keyword">this</span>.s=s;
+}
+
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span>(<span class="params"></span>) </span>{
+    System.<span class="keyword">out</span>.println(s);
+}
+</code></pre><p>}<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">Output:</span></span><br></pre></td></tr></table></figure></p>
+<p>null<br>abc<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Example 5: <span class="operator"><span class="keyword">Change</span> <span class="built_in">array</span> <span class="keyword">size</span> though reflection</span></span><br></pre></td></tr></table></figure></p>
+<p>package myreflection;</p>
+<p>import java.lang.reflect.Array;</p>
+<p>public class ReflectionHelloWorld {<br>    public static void main(String[] args) {<br>        int[] intArray = { 1, 2, 3, 4, 5 };<br>        int[] newIntArray = (int[]) changeArraySize(intArray, 10);<br>        print(newIntArray);</p>
+<pre><code>    <span class="keyword">String</span>[] atr = { <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span> };
+    <span class="keyword">String</span>[] str1 = (<span class="keyword">String</span>[]) changeArraySize(atr, <span class="number">10</span>);
+    <span class="built_in">print</span>(str1);
+}
+
+<span class="comment">// change array size</span>
+<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">Object</span> changeArraySize(<span class="keyword">Object</span> obj, <span class="built_in">int</span> len) {
+    Class&lt;?&gt; arr = obj.getClass().getComponentType();
+    <span class="keyword">Object</span> newArray = <span class="keyword">Array</span>.newInstance(arr, len);
+
+    <span class="comment">//do array copy</span>
+    <span class="built_in">int</span> co = <span class="keyword">Array</span>.getLength(obj);
+    System.arraycopy(obj, <span class="number">0</span>, newArray, <span class="number">0</span>, co);
+    <span class="keyword">return</span> newArray;
+}
+
+<span class="comment">// print</span>
+<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="built_in">print</span>(<span class="keyword">Object</span> obj) {
+    Class&lt;?&gt; c = obj.getClass();
+    <span class="keyword">if</span> (!c.isArray()) {
+        <span class="keyword">return</span>;
+    }
+
+    System.out.<span class="built_in">println</span>(<span class="string">"\nArray length: "</span> + <span class="keyword">Array</span>.getLength(obj));
+
+    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">Array</span>.getLength(obj); i++) {
+        System.out.<span class="built_in">print</span>(<span class="keyword">Array</span>.<span class="built_in">get</span>(obj, i) + <span class="string">" "</span>);
+    }
+}
+</code></pre><p>}<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">Output:</span></span><br></pre></td></tr></table></figure></p>
+<p>Array length: 10<br>1 2 3 4 5 0 0 0 0 0<br>Array length: 10<br>a b c d e null null null null null<br>```</p>
+<p>##Reference</p>
 <ul>
-<li>最坏的运行时间是O(n^2)</li>
-<li>最好的序列是{1，5，19，41，109…} 的项是[9<em>4^i-9</em>2^i+1]和[4^i-3*2^i+1]</li>
+<li><a href="http://www.programcreek.com/2013/09/java-reflection-tutorial/" target="_blank" rel="external">http://www.programcreek.com/2013/09/java-reflection-tutorial/</a></li>
 </ul>
-<h2 id="简单实现（Java）">简单实现（Java）</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shellSort</span><span class="params">(<span class="keyword">int</span>[]table)</span></span>&#123;</span><br><span class="line">	<span class="comment">//控制增量，增量减半</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> delta=table.length/<span class="number">2</span>;delta&gt;<span class="number">0</span>;delta/=<span class="number">2</span>)&#123;</span><br><span class="line">		<span class="comment">//一趟分若干组，一组进行直接插入排序</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=delta;i&lt;table.length;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> temp=table[i],j;</span><br><span class="line">			<span class="comment">//每组元素相距delta远，寻找插入位置</span></span><br><span class="line">			<span class="keyword">for</span>(j=i-delta;j&gt;=<span class="number">0</span>&amp;&amp;temp&lt;table[j];j-=delta)</span><br><span class="line">				table[j+delta]=table[j];</span><br><span class="line">				table[j+delta]=temp;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>使用Hibbard增量，平均运行时间是<strong>O(N^(5/4))</strong></li>
-<li>使用{1，5，19，41，109…}平均运行时间<strong>O(N(7/6))</strong></li>
+<h2 id="You_may_Also_Like">You may Also Like</h2><ul>
+<li><a href="http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html" target="_blank" rel="external">http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html</a></li>
+<li><a href="http://www.cnblogs.com/jqyp/archive/2012/03/29/2423112.html" target="_blank" rel="external">http://www.cnblogs.com/jqyp/archive/2012/03/29/2423112.html</a></li>
+<li><a href="http://blog.csdn.net/liujiahan629629/article/details/18013523" target="_blank" rel="external">http://blog.csdn.net/liujiahan629629/article/details/18013523</a></li>
 </ul>
 </span>
       
@@ -258,7 +373,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/【算法-java-排序】/" rel="tag">#【算法,java,排序】</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
         </div>
       
@@ -267,13 +382,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/28/算法分析/" rel="prev">算法分析</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/25/快速排序/" rel="next">快速排序</a>
+              <a href="/2015/11/05/Avoding-magic-number/" rel="next">Avoding magic number</a>
             
           </div>
         </div>
@@ -288,10 +401,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/05/27/希尔排序/"
-     data-title="希尔排序"
+        <div class="ds-share flat" data-thread-key="2015/11/17/Java-Reflection/"
+     data-title="Java Reflection"
      data-content=""
-     data-url="http://linnever.github.io/2015/05/27/希尔排序/">
+     data-url="http://linnever.github.io/2015/11/17/Java-Reflection/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -317,8 +430,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/27/希尔排序/"
-                   data-title="希尔排序" data-url="http://linnever.github.io/2015/05/27/希尔排序/">
+              <div class="ds-thread" data-thread-key="2015/11/17/Java-Reflection/"
+                   data-title="Java Reflection" data-url="http://linnever.github.io/2015/11/17/Java-Reflection/">
               </div>
             
           </div>
@@ -416,7 +529,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">1.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单实现（Java）"><span class="nav-number">2.</span> <span class="nav-text">简单实现（Java）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java_Reflection"><span class="nav-number">1.</span> <span class="nav-text">Java Reflection</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#what_is_Introspection_and_reflection?"><span class="nav-number">1.1.</span> <span class="nav-text">what is Introspection and reflection?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why_do_we_need_reflection?"><span class="nav-number">1.2.</span> <span class="nav-text">Why do we need reflection?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You_may_Also_Like"><span class="nav-number">1.3.</span> <span class="nav-text">You may Also Like</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
