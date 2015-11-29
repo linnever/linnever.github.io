@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="Servlet," />
+  <meta name="keywords" content="Creational_Patterns,Factory_Pattern," />
 
 
 
@@ -35,19 +35,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Servlet的映射在WebContent下新建文件下的jsp，如果想要跳转到Servle。如何去配置映射呢？在servlet3.0中（Dynamic web module version 3.0+）界面配置如下：@WebServlet(“/你新建的文件（该文件夹里有jsp需要跳转servlet）/需要跳转servlet名”)
-Mysql 的executeUpdate()1int updateNu">
+<meta name="description" content="The Factory pattern provides a way to use an instance as a object factory.The factory can return an instance of one of several possible classes(in a subclass hierarchy),depending on the date provided">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Servlet-Mapping">
-<meta property="og:url" content="http://linnever.github.io/2015/06/03/Servlet-Mapping/index.html">
+<meta property="og:title" content="Factory_Pattern">
+<meta property="og:url" content="http://linnever.github.io/2015/11/28/New Document/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="Servlet的映射在WebContent下新建文件下的jsp，如果想要跳转到Servle。如何去配置映射呢？在servlet3.0中（Dynamic web module version 3.0+）界面配置如下：@WebServlet(“/你新建的文件（该文件夹里有jsp需要跳转servlet）/需要跳转servlet名”)
-Mysql 的executeUpdate()1int updateNu">
-<meta property="og:updated_time" content="2015-08-11T16:59:04.116Z">
+<meta property="og:description" content="The Factory pattern provides a way to use an instance as a object factory.The factory can return an instance of one of several possible classes(in a subclass hierarchy),depending on the date provided">
+<meta property="og:updated_time" content="2015-11-28T10:34:42.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Servlet-Mapping">
-<meta name="twitter:description" content="Servlet的映射在WebContent下新建文件下的jsp，如果想要跳转到Servle。如何去配置映射呢？在servlet3.0中（Dynamic web module version 3.0+）界面配置如下：@WebServlet(“/你新建的文件（该文件夹里有jsp需要跳转servlet）/需要跳转servlet名”)
-Mysql 的executeUpdate()1int updateNu">
+<meta name="twitter:title" content="Factory_Pattern">
+<meta name="twitter:description" content="The Factory pattern provides a way to use an instance as a object factory.The factory can return an instance of one of several possible classes(in a subclass hierarchy),depending on the date provided">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -57,7 +54,7 @@ Mysql 的executeUpdate()1int updateNu">
   };
 </script>
 
-  <title> Servlet-Mapping | Linnever </title>
+  <title> Factory_Pattern | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +190,7 @@ Mysql 的executeUpdate()1int updateNu">
           
           
             
-              Servlet-Mapping
+              Factory_Pattern
             
           
         </h1>
@@ -202,8 +199,8 @@ Mysql 的executeUpdate()1int updateNu">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-06-03T15:58:13+08:00" content="2015-06-03">
-            2015-06-03
+          <time itemprop="dateCreated" datetime="2015-11-28T14:23:14+08:00" content="2015-11-28">
+            2015-11-28
           </time>
         </span>
 
@@ -212,8 +209,8 @@ Mysql 的executeUpdate()1int updateNu">
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Code-Summary/" itemprop="url" rel="index">
-                  <span itemprop="name">Code Summary</span>
+                <a href="/categories/Design-pattern/" itemprop="url" rel="index">
+                  <span itemprop="name">Design_pattern</span>
                 </a>
               </span>
 
@@ -228,8 +225,8 @@ Mysql 的executeUpdate()1int updateNu">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/06/03/Servlet-Mapping/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/03/Servlet-Mapping/" itemprop="commentsCount"></span>
+              <a href="/2015/11/28/New Document/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/28/New Document/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -243,9 +240,11 @@ Mysql 的executeUpdate()1int updateNu">
       
 
       
-        <span itemprop="articleBody"><h2 id="Servlet的映射">Servlet的映射</h2><p>在<strong>WebContent</strong>下新建文件下的jsp，如果想要跳转到Servle。如何去配置映射呢？<br>在servlet3.0中（Dynamic web module version 3.0+）界面配置如下：<br>@WebServlet(“/你新建的文件（该文件夹里有jsp需要跳转servlet）/需要跳转servlet名”)</p>
-<h2 id="Mysql_的executeUpdate()">Mysql 的executeUpdate()</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int updateNum=stmt.<span class="function"><span class="title">executeUpdate</span><span class="params">(sql)</span></span></span><br></pre></td></tr></table></figure>
-<p>这条语句指你的sql语句是否在数据库中执行成功，如果你的sql语句效果上没有改变数据库，<strong>updateNum</strong>值还是大于0的</p>
+        <span itemprop="articleBody"><p>The Factory pattern provides a way to use an instance as a object factory.The factory can return an instance of one of several possible classes(in a subclass hierarchy),depending on the date provided to it.<br><a id="more"></a></p>
+<h2 id="Where_to_use">Where to use</h2><ul>
+<li>when a class can anticipate which kind of class of object it must create.</li>
+<li></li>
+</ul>
 </span>
       
     </div>
@@ -254,7 +253,9 @@ Mysql 的executeUpdate()1int updateNu">
       
         <div class="post-tags">
           
-            <a href="/tags/Servlet/" rel="tag">#Servlet</a>
+            <a href="/tags/Creational-Patterns/" rel="tag">#Creational_Patterns</a>
+          
+            <a href="/tags/Factory-Pattern/" rel="tag">#Factory_Pattern</a>
           
         </div>
       
@@ -263,13 +264,11 @@ Mysql 的executeUpdate()1int updateNu">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/18/指针数组/" rel="prev">指针数组</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/29/归并排序/" rel="next">归并排序</a>
+              <a href="/2015/11/26/Strategy_Pattern/" rel="next">Strategy_Pattern</a>
             
           </div>
         </div>
@@ -284,10 +283,10 @@ Mysql 的executeUpdate()1int updateNu">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/06/03/Servlet-Mapping/"
-     data-title="Servlet-Mapping"
+        <div class="ds-share flat" data-thread-key="2015/11/28/New Document/"
+     data-title="Factory_Pattern"
      data-content=""
-     data-url="http://linnever.github.io/2015/06/03/Servlet-Mapping/">
+     data-url="http://linnever.github.io/2015/11/28/New Document/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -313,8 +312,8 @@ Mysql 的executeUpdate()1int updateNu">
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/06/03/Servlet-Mapping/"
-                   data-title="Servlet-Mapping" data-url="http://linnever.github.io/2015/06/03/Servlet-Mapping/">
+              <div class="ds-thread" data-thread-key="2015/11/28/New Document/"
+                   data-title="Factory_Pattern" data-url="http://linnever.github.io/2015/11/28/New Document/">
               </div>
             
           </div>
@@ -412,7 +411,7 @@ Mysql 的executeUpdate()1int updateNu">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet的映射"><span class="nav-number">1.</span> <span class="nav-text">Servlet的映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql_的executeUpdate()"><span class="nav-number">2.</span> <span class="nav-text">Mysql 的executeUpdate()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Where_to_use"><span class="nav-number">1.</span> <span class="nav-text">Where to use</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
