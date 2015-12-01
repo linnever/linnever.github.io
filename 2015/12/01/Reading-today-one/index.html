@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="LeetCode," />
+  <meta name="keywords" content="Reading-list," />
 
 
 
@@ -35,16 +35,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Contains Duplicate IIGiven an array of integers and an integer k, find out whether there there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i an">
+<meta name="description" content="Programming Principles
+Google Java Style">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-219">
-<meta property="og:url" content="http://linnever.github.io/2015/07/18/LeetCode-219/index.html">
+<meta property="og:title" content="Reading-today-one">
+<meta property="og:url" content="http://linnever.github.io/2015/12/01/Reading-today-one/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="Contains Duplicate IIGiven an array of integers and an integer k, find out whether there there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i an">
-<meta property="og:updated_time" content="2015-08-11T17:02:36.397Z">
+<meta property="og:description" content="Programming Principles
+Google Java Style">
+<meta property="og:updated_time" content="2015-12-01T06:03:55.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-219">
-<meta name="twitter:description" content="Contains Duplicate IIGiven an array of integers and an integer k, find out whether there there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i an">
+<meta name="twitter:title" content="Reading-today-one">
+<meta name="twitter:description" content="Programming Principles
+Google Java Style">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -54,7 +57,7 @@
   };
 </script>
 
-  <title> LeetCode-219 | Linnever </title>
+  <title> Reading-today-one | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -190,7 +193,7 @@
           
           
             
-              LeetCode-219
+              Reading-today-one
             
           
         </h1>
@@ -199,8 +202,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-07-18T02:29:25+08:00" content="2015-07-18">
-            2015-07-18
+          <time itemprop="dateCreated" datetime="2015-12-01T14:01:11+08:00" content="2015-12-01">
+            2015-12-01
           </time>
         </span>
 
@@ -209,8 +212,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                  <span itemprop="name">LeetCode</span>
+                <a href="/categories/Reading-list/" itemprop="url" rel="index">
+                  <span itemprop="name">Reading-list</span>
                 </a>
               </span>
 
@@ -225,8 +228,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/07/18/LeetCode-219/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/18/LeetCode-219/" itemprop="commentsCount"></span>
+              <a href="/2015/12/01/Reading-today-one/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/01/Reading-today-one/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -240,14 +243,10 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="Contains_Duplicate_II">Contains Duplicate II</h1><p>Given an array of integers and an integer k, find out whether there there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k. </p>
-<h2 id="题目大意：">题目大意：</h2><p>给定一个整数数组nums与一个整数k，当且仅当存在两个不同的下标i和j满足nums[i] = nums[j]并且| i - j | &lt;= k时返回true，否则返回false。<br><a id="more"></a></p>
-<h2 id="解题思路：">解题思路：</h2><ol>
-<li>当且仅当说明整个数组里有且只有两个数字相同，而且它们的下标差绝对值不大于k。</li>
-<li>返回为true的可能性要小，有特殊性（在k个字符内有且仅有两个相同的字符）。所以，可以用k长的窗口，在窗口里去判断是否有相同的字符，而字符的唯一性，设置一个变量来记录。</li>
-<li>尽量使用复杂度低的算法，该算法时间复杂度为O(N)的。</li>
-</ol>
-<h2 id="实现方法如下：">实现方法如下：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> Solution &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> boolean <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; appearedNum = <span class="keyword">new</span> HashSet&lt;Integer&gt;();  </span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = <span class="number">0</span>, num=<span class="number">0</span>;  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++)&#123;  </span><br><span class="line">            <span class="keyword">if</span>(!appearedNum.contains(nums[i]))&#123;  </span><br><span class="line">                appearedNum.add(nums[i]);  </span><br><span class="line">                end++;  <span class="comment">//窗口往后移动</span></span><br><span class="line">            &#125; </span><br><span class="line">            <span class="keyword">else</span> num++;  <span class="comment">//确定唯一性</span></span><br><span class="line">            <span class="keyword">if</span>(end - start  &gt; k) &#123;  </span><br><span class="line">                appearedNum.remove(nums[start]);  <span class="comment">//时刻保持appearedNum里只有k个字符</span></span><br><span class="line">                start++;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(num==<span class="number">1</span>) <span class="comment">//判断是否唯一</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><ul>
+<li><a href="http://webpro.github.io/programming-principles/" target="_blank" rel="external">Programming Principles</a></li>
+<li><a href="https://google.github.io/styleguide/javaguide.html" target="_blank" rel="external">Google Java Style</a></li>
+</ul>
 </span>
       
     </div>
@@ -256,7 +255,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
+            <a href="/tags/Reading-list/" rel="tag">#Reading-list</a>
           
         </div>
       
@@ -265,13 +264,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/19/LeetCode-153/" rel="prev">LeetCode-153</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/17/LeetCode-217/" rel="next">LeetCode-217</a>
+              <a href="/2015/11/28/New Document/" rel="next">Factory_Pattern</a>
             
           </div>
         </div>
@@ -286,10 +283,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/07/18/LeetCode-219/"
-     data-title="LeetCode-219"
+        <div class="ds-share flat" data-thread-key="2015/12/01/Reading-today-one/"
+     data-title="Reading-today-one"
      data-content=""
-     data-url="http://linnever.github.io/2015/07/18/LeetCode-219/">
+     data-url="http://linnever.github.io/2015/12/01/Reading-today-one/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -315,8 +312,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/07/18/LeetCode-219/"
-                   data-title="LeetCode-219" data-url="http://linnever.github.io/2015/07/18/LeetCode-219/">
+              <div class="ds-thread" data-thread-key="2015/12/01/Reading-today-one/"
+                   data-title="Reading-today-one" data-url="http://linnever.github.io/2015/12/01/Reading-today-one/">
               </div>
             
           </div>
@@ -414,7 +411,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Contains_Duplicate_II"><span class="nav-number">1.</span> <span class="nav-text">Contains Duplicate II</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意："><span class="nav-number">1.1.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路："><span class="nav-number">1.2.</span> <span class="nav-text">解题思路：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现方法如下："><span class="nav-number">1.3.</span> <span class="nav-text">实现方法如下：</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
