@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://linnever.github.io/"/>
-  <updated>2015-12-13T10:05:20.096Z</updated>
+  <updated>2015-12-13T10:24:14.842Z</updated>
   <id>http://linnever.github.io/</id>
   
   <author>
@@ -19,13 +19,17 @@
     <link href="http://linnever.github.io/2015/12/13/git%E4%BD%BF%E7%94%A8/"/>
     <id>http://linnever.github.io/2015/12/13/git使用/</id>
     <published>2015-12-13T09:52:03.000Z</published>
-    <updated>2015-12-13T10:05:20.096Z</updated>
-    <content type="html"><![CDATA[<p>git 如何版本返回<br><a id="more"></a><br>使用：<font color="red"><code>$ git log</code></font>命令查看提交的历史。<br><img src="http://i.imgur.com/wzJxS1n.png" alt=""></p>
+    <updated>2015-12-13T10:24:14.842Z</updated>
+    <content type="html"><![CDATA[<p>git 版本返回<br><a id="more"></a></p>
+<h2 id="查看commit历史">查看commit历史</h2><p><font color="#7cb1be"><code>$ git log</code></font> ：查看提交的历史。</p>
+<p><img src="http://i.imgur.com/wzJxS1n.png" alt=""></p>
 <h2 id="退出git_log命令">退出<code>git log</code>命令</h2><p>输入<code>q</code>后就退出了。</p>
-<h2 id="版本返回">版本返回</h2><p>输入命令：<font color="red"><code>git reset --hard commit_id</code></font><br>不需要输入全部的id名，输入前几位就行。<br>版本返回出错，想回去怎么办呢<br>输入命令：<font color="red"><code>git reflog</code></font><br><img src="http://i.imgur.com/XUtFrh2.png" alt=""><br>再使用<font color="red"><code>git reset --hard commit_id</code></font>回到想要的版本。</p>
+<h2 id="版本返回">版本返回</h2><p><font color="#7cb1be"><code>git reset --hard commit_id</code></font>：不需要输入全部的id名，输入前几位就行。</p>
+<h2 id="版本向前">版本向前</h2><p><font color="#7cb1be"><code>git reflog</code></font>：查看输入命令历史<br><img src="http://i.imgur.com/XUtFrh2.png" alt=""></p>
+<p>再使用<font color="#7cb1be"><code>git reset --hard commit_id</code></font>回到想要的版本。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>git 如何版本返回<br>]]>
+    <![CDATA[<p>git 版本返回<br>]]>
     
     </summary>
     

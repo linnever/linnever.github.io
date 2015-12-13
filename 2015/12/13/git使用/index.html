@@ -37,18 +37,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="git 如何版本返回">
+<meta name="description" content="git 版本返回">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git使用(1)">
 <meta property="og:url" content="http://linnever.github.io/2015/12/13/git使用/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="git 如何版本返回">
+<meta property="og:description" content="git 版本返回">
 <meta property="og:image" content="http://i.imgur.com/wzJxS1n.png">
 <meta property="og:image" content="http://i.imgur.com/XUtFrh2.png">
-<meta property="og:updated_time" content="2015-12-13T10:05:20.096Z">
+<meta property="og:updated_time" content="2015-12-13T10:24:14.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用(1)">
-<meta name="twitter:description" content="git 如何版本返回">
+<meta name="twitter:description" content="git 版本返回">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -254,9 +254,13 @@
       
 
       
-        <span itemprop="articleBody"><p>git 如何版本返回<br><a id="more"></a><br>使用：<font color="red"><code>$ git log</code></font>命令查看提交的历史。<br><img src="http://i.imgur.com/wzJxS1n.png" alt=""></p>
+        <span itemprop="articleBody"><p>git 版本返回<br><a id="more"></a></p>
+<h2 id="查看commit历史">查看commit历史</h2><p><font color="#7cb1be"><code>$ git log</code></font> ：查看提交的历史。</p>
+<p><img src="http://i.imgur.com/wzJxS1n.png" alt=""></p>
 <h2 id="退出git_log命令">退出<code>git log</code>命令</h2><p>输入<code>q</code>后就退出了。</p>
-<h2 id="版本返回">版本返回</h2><p>输入命令：<font color="red"><code>git reset --hard commit_id</code></font><br>不需要输入全部的id名，输入前几位就行。<br>版本返回出错，想回去怎么办呢<br>输入命令：<font color="red"><code>git reflog</code></font><br><img src="http://i.imgur.com/XUtFrh2.png" alt=""><br>再使用<font color="red"><code>git reset --hard commit_id</code></font>回到想要的版本。</p>
+<h2 id="版本返回">版本返回</h2><p><font color="#7cb1be"><code>git reset --hard commit_id</code></font>：不需要输入全部的id名，输入前几位就行。</p>
+<h2 id="版本向前">版本向前</h2><p><font color="#7cb1be"><code>git reflog</code></font>：查看输入命令历史<br><img src="http://i.imgur.com/XUtFrh2.png" alt=""></p>
+<p>再使用<font color="#7cb1be"><code>git reset --hard commit_id</code></font>回到想要的版本。</p>
 </span>
       
     </div>
@@ -428,7 +432,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#退出git_log命令"><span class="nav-number">1.</span> <span class="nav-text">退出git log命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本返回"><span class="nav-number">2.</span> <span class="nav-text">版本返回</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看commit历史"><span class="nav-number">1.</span> <span class="nav-text">查看commit历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出git_log命令"><span class="nav-number">2.</span> <span class="nav-text">退出git log命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本返回"><span class="nav-number">3.</span> <span class="nav-text">版本返回</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本向前"><span class="nav-number">4.</span> <span class="nav-text">版本向前</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
