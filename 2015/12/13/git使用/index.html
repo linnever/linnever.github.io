@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="Markdown," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -37,16 +37,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="如何给Markdown字体添加颜色">
+<meta name="description" content="git 如何版本返回">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown技巧">
-<meta property="og:url" content="http://linnever.github.io/2015/09/10/Markdown技巧/index.html">
+<meta property="og:title" content="git使用(1)">
+<meta property="og:url" content="http://linnever.github.io/2015/12/13/git使用/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="如何给Markdown字体添加颜色">
-<meta property="og:updated_time" content="2015-09-13T03:11:24.574Z">
+<meta property="og:description" content="git 如何版本返回">
+<meta property="og:image" content="http://i.imgur.com/wzJxS1n.png">
+<meta property="og:image" content="http://i.imgur.com/XUtFrh2.png">
+<meta property="og:updated_time" content="2015-12-13T10:05:20.096Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown技巧">
-<meta name="twitter:description" content="如何给Markdown字体添加颜色">
+<meta name="twitter:title" content="git使用(1)">
+<meta name="twitter:description" content="git 如何版本返回">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +58,7 @@
   };
 </script>
 
-  <title> Markdown技巧 | Linnever </title>
+  <title> git使用(1) | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +204,7 @@
           
           
             
-              Markdown技巧
+              git使用(1)
             
           
         </h1>
@@ -211,8 +213,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-09-10T22:39:53+08:00" content="2015-09-10">
-            2015-09-10
+          <time itemprop="dateCreated" datetime="2015-12-13T17:52:03+08:00" content="2015-12-13">
+            2015-12-13
           </time>
         </span>
 
@@ -221,8 +223,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Markdown/" itemprop="url" rel="index">
-                  <span itemprop="name">Markdown</span>
+                <a href="/categories/git/" itemprop="url" rel="index">
+                  <span itemprop="name">git</span>
                 </a>
               </span>
 
@@ -237,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/09/10/Markdown技巧/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/10/Markdown技巧/" itemprop="commentsCount"></span>
+              <a href="/2015/12/13/git使用/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/13/git使用/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -252,10 +254,10 @@
       
 
       
-        <span itemprop="articleBody"><p>如何给Markdown字体添加颜色<br><a id="more"></a></p>
-<p>形如：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="string">"red"</span>&gt;要变红的文字&lt;/<span class="attribute">font</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>效果如下：</p>
-<font color="red">要变红的文字</font></span>
+        <span itemprop="articleBody"><p>git 如何版本返回<br><a id="more"></a><br>使用：<font color="red"><code>$ git log</code></font>命令查看提交的历史。<br><img src="http://i.imgur.com/wzJxS1n.png" alt=""></p>
+<h2 id="退出git_log命令">退出<code>git log</code>命令</h2><p>输入<code>q</code>后就退出了。</p>
+<h2 id="版本返回">版本返回</h2><p>输入命令：<font color="red"><code>git reset --hard commit_id</code></font><br>不需要输入全部的id名，输入前几位就行。<br>版本返回出错，想回去怎么办呢<br>输入命令：<font color="red"><code>git reflog</code></font><br><img src="http://i.imgur.com/XUtFrh2.png" alt=""><br>再使用<font color="red"><code>git reset --hard commit_id</code></font>回到想要的版本。</p>
+</span>
       
     </div>
 
@@ -263,7 +265,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag">#Markdown</a>
+            <a href="/tags/git/" rel="tag">#git</a>
           
         </div>
       
@@ -272,13 +274,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/10/JDK1.8.0_60---LinkedList源码分析/" rel="prev">JDK1.8.0_60---LinkedList源码分析</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/19/Softwares/" rel="next">Softwares</a>
+              <a href="/2015/12/08/Deep-understanding-of-Arrays-sort/" rel="next">Deep understanding of Arrays.sort()</a>
             
           </div>
         </div>
@@ -293,10 +293,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/09/10/Markdown技巧/"
-     data-title="Markdown技巧"
+        <div class="ds-share flat" data-thread-key="2015/12/13/git使用/"
+     data-title="git使用(1)"
      data-content=""
-     data-url="http://linnever.github.io/2015/09/10/Markdown技巧/">
+     data-url="http://linnever.github.io/2015/12/13/git使用/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -322,8 +322,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/09/10/Markdown技巧/"
-                   data-title="Markdown技巧" data-url="http://linnever.github.io/2015/09/10/Markdown技巧/">
+              <div class="ds-thread" data-thread-key="2015/12/13/git使用/"
+                   data-title="git使用(1)" data-url="http://linnever.github.io/2015/12/13/git使用/">
               </div>
             
           </div>
@@ -428,7 +428,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#退出git_log命令"><span class="nav-number">1.</span> <span class="nav-text">退出git log命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本返回"><span class="nav-number">2.</span> <span class="nav-text">版本返回</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
