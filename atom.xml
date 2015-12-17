@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://linnever.github.io/"/>
-  <updated>2015-12-13T10:24:14.842Z</updated>
+  <updated>2015-12-17T09:41:02.005Z</updated>
   <id>http://linnever.github.io/</id>
   
   <author>
@@ -15,21 +15,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[git使用(1)]]></title>
+    <title><![CDATA[git使用]]></title>
     <link href="http://linnever.github.io/2015/12/13/git%E4%BD%BF%E7%94%A8/"/>
     <id>http://linnever.github.io/2015/12/13/git使用/</id>
     <published>2015-12-13T09:52:03.000Z</published>
-    <updated>2015-12-13T10:24:14.842Z</updated>
-    <content type="html"><![CDATA[<p>git 版本返回<br><a id="more"></a></p>
-<h2 id="查看commit历史">查看commit历史</h2><p><font color="#7cb1be"><code>$ git log</code></font> ：查看提交的历史。</p>
+    <updated>2015-12-17T09:41:02.005Z</updated>
+    <content type="html"><![CDATA[<p>git 使用<br><a id="more"></a></p>
+<h2 id="git_版本返回">git 版本返回</h2><h3 id="查看commit历史">查看commit历史</h3><p><font color="#7cb1be"><code>$ git log</code></font> ：查看提交的历史。</p>
 <p><img src="http://i.imgur.com/wzJxS1n.png" alt=""></p>
-<h2 id="退出git_log命令">退出<code>git log</code>命令</h2><p>输入<code>q</code>后就退出了。</p>
-<h2 id="版本返回">版本返回</h2><p><font color="#7cb1be"><code>git reset --hard commit_id</code></font>：不需要输入全部的id名，输入前几位就行。</p>
-<h2 id="版本向前">版本向前</h2><p><font color="#7cb1be"><code>git reflog</code></font>：查看输入命令历史<br><img src="http://i.imgur.com/XUtFrh2.png" alt=""></p>
+<h3 id="退出git_log命令">退出<code>git log</code>命令</h3><p>输入<code>q</code>后就退出了。</p>
+<h3 id="版本返回">版本返回</h3><p><font color="#7cb1be"><code>git reset --hard commit_id</code></font>：不需要输入全部的id名，输入前几位就行。</p>
+<h3 id="版本向前">版本向前</h3><p><font color="#7cb1be"><code>git reflog</code></font>：查看输入命令历史<br><img src="http://i.imgur.com/XUtFrh2.png" alt=""></p>
 <p>再使用<font color="#7cb1be"><code>git reset --hard commit_id</code></font>回到想要的版本。</p>
+<h2 id="git_修改远程仓库名">git 修改远程仓库名</h2><p>error:<br><code>remote: This repository moved. Please use the new location [new location</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="operator"><span class="keyword">set</span>-<span class="keyword">url</span> origin [<span class="keyword">updated</span> <span class="keyword">link</span> <span class="keyword">url</span> https://........git]</span></span><br></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add <span class="keyword">new</span><span class="number">_</span>origin [updated link]</span><br><span class="line">git remote rm origin</span><br><span class="line">git remote rename <span class="keyword">new</span><span class="number">_</span>origin origin</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>git 版本返回<br>]]>
+    <![CDATA[<p>git 使用<br>]]>
     
     </summary>
     
