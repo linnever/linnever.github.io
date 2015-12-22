@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="【算法,java,排序】," />
+  <meta name="keywords" content="Gradle," />
 
 
 
@@ -37,16 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="归并排序运行时间是O(NlogN),但是很难用于主存排序。主要是因为合并两个排序的表需要线性附加内存，在整个算法中还要花费将数据拷贝到临时数组再拷贝回来这样的附加的工作，其结果严重影响了排序的速度。合并适合于外部排序">
+<meta name="description" content="最近学习一下 Gradle 自动化构建工具 。看完 Building_and_testing_with_Gradle.pdf感觉还是不够的，还得看看 gradle guide才能体会到自动化构建的快感。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="归并排序">
-<meta property="og:url" content="http://linnever.github.io/2015/05/29/归并排序/index.html">
+<meta property="og:title" content="Learning Gradle">
+<meta property="og:url" content="http://linnever.github.io/2015/12/23/Learning-Gradle/index.html">
 <meta property="og:site_name" content="Linnever">
-<meta property="og:description" content="归并排序运行时间是O(NlogN),但是很难用于主存排序。主要是因为合并两个排序的表需要线性附加内存，在整个算法中还要花费将数据拷贝到临时数组再拷贝回来这样的附加的工作，其结果严重影响了排序的速度。合并适合于外部排序">
-<meta property="og:updated_time" content="2015-08-11T17:00:29.029Z">
+<meta property="og:description" content="最近学习一下 Gradle 自动化构建工具 。看完 Building_and_testing_with_Gradle.pdf感觉还是不够的，还得看看 gradle guide才能体会到自动化构建的快感。">
+<meta property="og:updated_time" content="2015-12-22T19:33:24.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="归并排序">
-<meta name="twitter:description" content="归并排序运行时间是O(NlogN),但是很难用于主存排序。主要是因为合并两个排序的表需要线性附加内存，在整个算法中还要花费将数据拷贝到临时数组再拷贝回来这样的附加的工作，其结果严重影响了排序的速度。合并适合于外部排序">
+<meta name="twitter:title" content="Learning Gradle">
+<meta name="twitter:description" content="最近学习一下 Gradle 自动化构建工具 。看完 Building_and_testing_with_Gradle.pdf感觉还是不够的，还得看看 gradle guide才能体会到自动化构建的快感。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +56,7 @@
   };
 </script>
 
-  <title> 归并排序 | Linnever </title>
+  <title> Learning Gradle | Linnever </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +202,7 @@
           
           
             
-              归并排序
+              Learning Gradle
             
           
         </h1>
@@ -211,8 +211,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-29T22:20:08+08:00" content="2015-05-29">
-            2015-05-29
+          <time itemprop="dateCreated" datetime="2015-12-23T03:22:07+08:00" content="2015-12-23">
+            2015-12-23
           </time>
         </span>
 
@@ -221,8 +221,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Algorithm-and-Data-Structures/" itemprop="url" rel="index">
-                  <span itemprop="name">Algorithm and Data Structures</span>
+                <a href="/categories/Gradle/" itemprop="url" rel="index">
+                  <span itemprop="name">Gradle</span>
                 </a>
               </span>
 
@@ -237,8 +237,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/29/归并排序/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/29/归并排序/" itemprop="commentsCount"></span>
+              <a href="/2015/12/23/Learning-Gradle/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/23/Learning-Gradle/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -252,7 +252,7 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="归并排序">归并排序</h2><p>运行时间是O(NlogN),但是很难用于主存排序。主要是因为合并两个排序的表需要线性附加内存，在整个算法中还要花费将数据拷贝到临时数组再拷贝回来这样的附加的工作，其结果严重影响了排序的速度。<br>合并适合于外部排序<br><a id="more"></a></p>
+        <span itemprop="articleBody"><p>最近学习一下 Gradle 自动化构建工具 。看完 <strong>Building_and_testing_with_Gradle.pdf</strong>感觉还是不够的，还得看看 <a href="https://docs.gradle.org/current/userguide/userguide.html" target="_blank" rel="external">gradle guide</a>才能体会到自动化构建的快感。<br><a id="more"></a><br>Github 上很多成熟的开源项目，很多都用到了<strong><a href="https://travis-ci.org/" target="_blank" rel="external">travis-ci</a></strong>,用了一下，感觉还不错。虽然之前一直没有build passing,当然最好还是成功了。^-^ 继续学习！！！</p>
 </span>
       
     </div>
@@ -261,7 +261,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/【算法-java-排序】/" rel="tag">#【算法,java,排序】</a>
+            <a href="/tags/Gradle/" rel="tag">#Gradle</a>
           
         </div>
       
@@ -270,13 +270,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/03/Servlet-Mapping/" rel="prev">Servlet-Mapping</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/28/算法分析/" rel="next">算法分析</a>
+              <a href="/2015/12/13/git使用/" rel="next">git使用</a>
             
           </div>
         </div>
@@ -291,10 +289,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/05/29/归并排序/"
-     data-title="归并排序"
+        <div class="ds-share flat" data-thread-key="2015/12/23/Learning-Gradle/"
+     data-title="Learning Gradle"
      data-content=""
-     data-url="http://linnever.github.io/2015/05/29/归并排序/">
+     data-url="http://linnever.github.io/2015/12/23/Learning-Gradle/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -320,8 +318,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/29/归并排序/"
-                   data-title="归并排序" data-url="http://linnever.github.io/2015/05/29/归并排序/">
+              <div class="ds-thread" data-thread-key="2015/12/23/Learning-Gradle/"
+                   data-title="Learning Gradle" data-url="http://linnever.github.io/2015/12/23/Learning-Gradle/">
               </div>
             
           </div>
@@ -426,7 +424,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">1.</span> <span class="nav-text">归并排序</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
